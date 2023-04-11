@@ -7,6 +7,27 @@
 
 import SwiftUI
 
+struct Show {
+    var stage: Stage
+    var startTime: Date
+    var endTime: Date
+    var day: Day
+    
+    @State var faved: Bool = false
+}
+
+struct Artist {
+    var name: String
+    var description: String
+    var image: Image
+    var shows: [Show] = []
+}
+
+struct Attraction {
+    var show: Show
+    var artist: Artist
+}
+
 struct AttractionCard: View {
     var artist: String
     var day: Day
@@ -18,10 +39,14 @@ struct AttractionCard: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            img
-                .cornerRadius(50)
-                .padding(.trailing, 5)
-                .padding(.top, 5)
+            NavigationLink {
+                // TODO: Go to artist's page
+            } label: {
+                img
+                    .cornerRadius(50)
+                    .padding(.trailing, 5)
+                    .padding(.top, 5)
+            }
             
             VStack {
                 HStack {
