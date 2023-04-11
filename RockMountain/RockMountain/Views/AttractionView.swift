@@ -20,7 +20,7 @@ struct AttractionView: View {
         
         let show = Show(stage: .floresta, startTime: start, endTime: end, day: .monday)
         
-        return Attraction(show: show, artist: artist)
+        return Attraction(show: show, artist: artist, faved: false)
     }
     
     var body: some View {

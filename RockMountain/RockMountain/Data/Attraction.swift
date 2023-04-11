@@ -10,4 +10,5 @@ import Foundation
 struct Attraction {
     var show: Show
     var artist: Artist
+    var faved: Bool
 }

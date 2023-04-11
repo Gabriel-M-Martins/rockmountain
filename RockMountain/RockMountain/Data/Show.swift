@@ -12,7 +12,6 @@ struct Show {
     var startTime: Date
     var endTime: Date
     var day: Day
-    var faved: Bool = false
     
     func formattedStartTime() -> String {
         let hour = Calendar.current.component(.hour, from: startTime)

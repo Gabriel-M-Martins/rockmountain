@@ -31,9 +31,9 @@ struct AttractionCard: View {
                     Spacer()
                     
                     Button {
-                        attraction.show.faved.toggle()
+                        attraction.faved.toggle()
                     } label: {
-                        Image(systemName: attraction.show.faved ? "staroflife.fill" : "staroflife")
+                        Image(systemName: attraction.faved ? "staroflife.fill" : "staroflife")
                             .resizable()
                             .frame(maxWidth: 30, maxHeight: 30)
                     }
@@ -61,7 +61,7 @@ struct AttractionCard_Previews: PreviewProvider {
         
         let show = Show(stage: .floresta, startTime: start, endTime: end, day: .monday)
         
-        let attraction = Attraction(show: show, artist: artist)
+        let attraction = Attraction(show: show, artist: artist, faved: false)
         
         return AttractionCard(attraction: attraction)
     }
