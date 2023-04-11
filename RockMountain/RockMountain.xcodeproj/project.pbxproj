@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		A790A20A29E4A05100B50611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790A20929E4A05100B50611 /* Assets.xcassets */; };
 		A790A20D29E4A05100B50611 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790A20C29E4A05100B50611 /* Preview Assets.xcassets */; };
+		A79EA04029E5E4E200C68336 /* Detailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EA03F29E5E4E200C68336 /* Detailable.swift */; };
+		A79EA04229E5EA6F00C68336 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EA04129E5EA6F00C68336 /* FavoriteButton.swift */; };
 		A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AA29E4EC4D00AAB0CF /* Day.swift */; };
 		A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AC29E4EC7100AAB0CF /* Stage.swift */; };
 		A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */; };
 		A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3429E59AB100158F34 /* Attraction.swift */; };
-		A7F40E3729E59AC700158F34 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3629E59AC700158F34 /* Artist.swift */; };
 		A7F40E3929E59AF100158F34 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3829E59AF100158F34 /* Show.swift */; };
 		B1333F6E29E5C75700E95859 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F6D29E5C75700E95859 /* Restaurant.swift */; };
 		B1333F7029E5C8A000E95859 /* RestaurantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F6F29E5C89F00E95859 /* RestaurantsView.swift */; };
@@ -27,11 +28,12 @@
 		A790A20229E4A05100B50611 /* RockMountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockMountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A790A20929E4A05100B50611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A790A20C29E4A05100B50611 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A79EA03F29E5E4E200C68336 /* Detailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detailable.swift; sourceTree = "<group>"; };
+		A79EA04129E5EA6F00C68336 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		A7AE13AA29E4EC4D00AAB0CF /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		A7AE13AC29E4EC7100AAB0CF /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionView.swift; sourceTree = "<group>"; };
 		A7F40E3429E59AB100158F34 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
-		A7F40E3629E59AC700158F34 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		A7F40E3829E59AF100158F34 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		B1333F6D29E5C75700E95859 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		B1333F6F29E5C89F00E95859 /* RestaurantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				B1333F6D29E5C75700E95859 /* Restaurant.swift */,
 				B1D0835829E5D9090089B987 /* ImageHeader.swift */,
 				B1D0835729E5D9090089B987 /* RockMountainApp.swift */,
+				A79EA04129E5EA6F00C68336 /* FavoriteButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -99,13 +102,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A79EA03E29E5E4B100C68336 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A79EA03F29E5E4E200C68336 /* Detailable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		A7F40E3329E59A8C00158F34 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A79EA03E29E5E4B100C68336 /* Protocols */,
 				A7AE13AC29E4EC7100AAB0CF /* Stage.swift */,
 				A7AE13AA29E4EC4D00AAB0CF /* Day.swift */,
 				A7F40E3429E59AB100158F34 /* Attraction.swift */,
-				A7F40E3629E59AC700158F34 /* Artist.swift */,
 				A7F40E3829E59AF100158F34 /* Show.swift */,
 			);
 			path = Data;
@@ -199,10 +210,11 @@
 				B1D0835B29E5D9090089B987 /* ImageHeader.swift in Sources */,
 				A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */,
 				A7F40E3929E59AF100158F34 /* Show.swift in Sources */,
-				A7F40E3729E59AC700158F34 /* Artist.swift in Sources */,
 				A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */,
 				B1D0835C29E5D9090089B987 /* AttractionCard.swift in Sources */,
 				B1D0835A29E5D9090089B987 /* RockMountainApp.swift in Sources */,
+				A79EA04029E5E4E200C68336 /* Detailable.swift in Sources */,
+				A79EA04229E5EA6F00C68336 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

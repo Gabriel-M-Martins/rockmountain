@@ -11,8 +11,6 @@ struct AttractionView: View {
     @State var searchText = ""
     
     var placeholder: Attraction {
-        let artist = Artist(name: "Maria Bethânia", description: "", image: Image("img"))
-        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
         let start = formatter.date(from: "2023/10/08 21:30")!
@@ -20,7 +18,9 @@ struct AttractionView: View {
         
         let show = Show(stage: .floresta, startTime: start, endTime: end, day: .monday)
         
-        return Attraction(show: show, artist: artist, faved: false)
+        let attraction = Attraction(name: "Maria Bethânia", info: "", favorite: false, image: Image("img"), show: [show], type: .artist)
+        
+        return attraction
     }
     
     var body: some View {
@@ -34,7 +34,7 @@ struct AttractionView: View {
                         NavigationLink {
                             
                         } label: {
-                            AttractionCard(attraction: placeholder)
+                            AttractionCard(attraction: placeholder, showIdx: 0)
                         }
                         .buttonStyle(PlainButtonStyle())
                     }
