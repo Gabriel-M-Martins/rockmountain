@@ -12,7 +12,7 @@ struct AttractionCard: View {
     var day: Day
     var hourStart: String
     var hourEnd: String
-    var palco: Palcos
+    var stage: Stage
     var img: Image
     var faved: Bool = true
     
@@ -27,7 +27,7 @@ struct AttractionCard: View {
                     .bold()
                 
                 Text("\(day.abrev()) | \(hourStart) - \(hourEnd)")
-                Text(palco.text())
+                Text(stage.text())
             }
             
             Spacer()
@@ -43,44 +43,6 @@ struct AttractionCard: View {
 
 struct AttractionCard_Previews: PreviewProvider {
     static var previews: some View {
-        AttractionCard(artist: "Iza", day: .sunday, hourStart: "21:30", hourEnd: "22:30", palco: .floresta, img: Image("img"))
-    }
-}
-
-enum Day {
-    case sunday, monday, tuesday, wednesday, thursday, friday, saturday
-    
-    func abrev() -> String {
-        switch self {
-        case .sunday:
-            return "DOM"
-        case .monday:
-            return "SEG"
-        case .tuesday:
-            return "TER"
-        case .wednesday:
-            return "QUA"
-        case .thursday:
-            return "QUI"
-        case .friday:
-            return "SEX"
-        case .saturday:
-            return "SAB"
-        }
-    }
-}
-
-enum Palcos {
-    case floresta, estrela, mangolab
-    
-    func text() -> String {
-        switch self {
-        case .floresta:
-            return "Palco Floresta"
-        case .estrela:
-            return "Palco Estrela"
-        case .mangolab:
-            return "Palco Mangolab"
-        }
+        AttractionCard(artist: "Iza", day: .sunday, hourStart: "21:30", hourEnd: "22:30", stage: .floresta, img: Image("img"))
     }
 }

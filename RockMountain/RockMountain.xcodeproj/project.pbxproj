@@ -12,6 +12,8 @@
 		A790A20A29E4A05100B50611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790A20929E4A05100B50611 /* Assets.xcassets */; };
 		A790A20D29E4A05100B50611 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790A20C29E4A05100B50611 /* Preview Assets.xcassets */; };
 		A790A21429E4A07300B50611 /* AttractionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A790A21329E4A07200B50611 /* AttractionCard.swift */; };
+		A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AA29E4EC4D00AAB0CF /* Day.swift */; };
+		A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AC29E4EC7100AAB0CF /* Stage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		A790A20929E4A05100B50611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A790A20C29E4A05100B50611 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A790A21329E4A07200B50611 /* AttractionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionCard.swift; sourceTree = "<group>"; };
+		A7AE13AA29E4EC4D00AAB0CF /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		A7AE13AC29E4EC7100AAB0CF /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				A790A20529E4A05100B50611 /* RockMountainApp.swift */,
 				A790A20729E4A05100B50611 /* ContentView.swift */,
 				A790A21329E4A07200B50611 /* AttractionCard.swift */,
+				A7AE13AC29E4EC7100AAB0CF /* Stage.swift */,
+				A7AE13AA29E4EC4D00AAB0CF /* Day.swift */,
 				A790A20929E4A05100B50611 /* Assets.xcassets */,
 				A790A20B29E4A05100B50611 /* Preview Content */,
 			);
@@ -142,7 +148,9 @@
 			files = (
 				A790A21429E4A07300B50611 /* AttractionCard.swift in Sources */,
 				A790A20829E4A05100B50611 /* ContentView.swift in Sources */,
+				A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */,
 				A790A20629E4A05100B50611 /* RockMountainApp.swift in Sources */,
+				A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
