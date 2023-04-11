@@ -56,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				B1D0835929E5D9090089B987 /* AttractionCard.swift */,
+				B1333F6D29E5C75700E95859 /* Restaurant.swift */,
 				B1D0835829E5D9090089B987 /* ImageHeader.swift */,
 				B1D0835729E5D9090089B987 /* RockMountainApp.swift */,
 			);
@@ -81,7 +82,6 @@
 		A790A20429E4A05100B50611 /* RockMountain */ = {
 			isa = PBXGroup;
 			children = (
-				B1333F7229E5C92D00E95859 /* Component */,
 				B1333F7129E5C92200E95859 /* Views */,
 				A714458829E5C56500164CF2 /* Components */,
 				A7F40E3329E59A8C00158F34 /* Data */,
@@ -119,14 +119,6 @@
 				B1333F7329E5CEAC00E95859 /* RestaurantDetail.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		B1333F7229E5C92D00E95859 /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				B1333F6D29E5C75700E95859 /* Restaurant.swift */,
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
