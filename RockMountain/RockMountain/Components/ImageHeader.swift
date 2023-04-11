@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ImageHeader: View {
     @State var details: Detailable
+    var favoritable: Bool = false
     
     var body: some View {
         ZStack {
@@ -27,7 +28,7 @@ struct ImageHeader: View {
                     
                     Spacer()
                     
-                    if details.favorite {
+                    if favoritable {
                         FavoriteButton(select: $details.favorite)
                     }
                 }
