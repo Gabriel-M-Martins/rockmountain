@@ -14,7 +14,7 @@ struct AttractionCard: View {
     var hourEnd: String
     var stage: Stage
     var img: Image
-    var faved: Bool = true
+    @State var faved: Bool = false
     
     var body: some View {
         HStack(alignment: .center) {
@@ -32,9 +32,14 @@ struct AttractionCard: View {
             
             Spacer()
             
-            Image(systemName: faved ? "staroflife.fill" : "staroflife")
-                .imageScale(.large)
-            
+            Button {
+                faved.toggle()
+            } label: {
+                Image(systemName: faved ? "staroflife.fill" : "staroflife")
+                    .imageScale(.large)
+                    .padding(.trailing, 5)
+            }
+            .foregroundColor(Color(UIColor.label))
         }
         .padding(.horizontal)
     }
