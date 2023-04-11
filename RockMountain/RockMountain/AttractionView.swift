@@ -31,7 +31,12 @@ struct AttractionView: View {
                         .navigationTitle("Atrações")
                     
                     ForEach((1...20), id: \.self) { value in
-                        AttractionCard(attraction: placeholder)
+                        NavigationLink {
+                            
+                        } label: {
+                            AttractionCard(attraction: placeholder)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
                 .background(.ultraThinMaterial)

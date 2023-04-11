@@ -12,14 +12,10 @@ struct AttractionCard: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            NavigationLink {
-                // TODO: Go to artist's page
-            } label: {
-                attraction.artist.image
-                    .cornerRadius(50)
-                    .padding(.trailing, 5)
-                    .padding(.top, 5)
-            }
+            attraction.artist.image
+                .cornerRadius(50)
+                .padding(.trailing, 5)
+                .padding(.top, 5)
             
             VStack {
                 HStack {
