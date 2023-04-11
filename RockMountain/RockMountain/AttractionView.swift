@@ -18,10 +18,16 @@ struct AttractionView: View {
                         .navigationTitle("Atrações")
                     
                     ForEach((1...20), id: \.self) { value in
-                        AttractionCard(artist: "Iza", day: .monday, hourStart: "18:00", hourEnd: "20:00", stage: .estrela, img: Image("img"))
+                        AttractionCard(artist: "Maria Bethânia", day: .monday, hourStart: "18:00", hourEnd: "20:00", stage: .estrela, img: Image("img"))
                     }
                 }
+                .background(.ultraThinMaterial)
+                .cornerRadius(20)
+                .shadow(color: Color.black.opacity(0.2), radius: 4)
+                .padding(.horizontal)
+                
             }
+            
         }
         .searchable(text: $searchText)
     }
