@@ -15,6 +15,9 @@
 		A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AA29E4EC4D00AAB0CF /* Day.swift */; };
 		A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AC29E4EC7100AAB0CF /* Stage.swift */; };
 		A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */; };
+		A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3429E59AB100158F34 /* Attraction.swift */; };
+		A7F40E3729E59AC700158F34 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3629E59AC700158F34 /* Artist.swift */; };
+		A7F40E3929E59AF100158F34 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3829E59AF100158F34 /* Show.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		A7AE13AA29E4EC4D00AAB0CF /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		A7AE13AC29E4EC7100AAB0CF /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionView.swift; sourceTree = "<group>"; };
+		A7F40E3429E59AB100158F34 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
+		A7F40E3629E59AC700158F34 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		A7F40E3829E59AF100158F34 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +65,11 @@
 		A790A20429E4A05100B50611 /* RockMountain */ = {
 			isa = PBXGroup;
 			children = (
+				A7F40E3329E59A8C00158F34 /* Data */,
 				A790A20529E4A05100B50611 /* RockMountainApp.swift */,
 				A790A20729E4A05100B50611 /* ContentView.swift */,
 				A790A21329E4A07200B50611 /* AttractionCard.swift */,
 				A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */,
-				A7AE13AC29E4EC7100AAB0CF /* Stage.swift */,
-				A7AE13AA29E4EC4D00AAB0CF /* Day.swift */,
 				A790A20929E4A05100B50611 /* Assets.xcassets */,
 				A790A20B29E4A05100B50611 /* Preview Content */,
 			);
@@ -77,6 +82,18 @@
 				A790A20C29E4A05100B50611 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A7F40E3329E59A8C00158F34 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A7AE13AC29E4EC7100AAB0CF /* Stage.swift */,
+				A7AE13AA29E4EC4D00AAB0CF /* Day.swift */,
+				A7F40E3429E59AB100158F34 /* Attraction.swift */,
+				A7F40E3629E59AC700158F34 /* Artist.swift */,
+				A7F40E3829E59AF100158F34 /* Show.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +169,11 @@
 				A790A21429E4A07300B50611 /* AttractionCard.swift in Sources */,
 				A790A20829E4A05100B50611 /* ContentView.swift in Sources */,
 				A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */,
+				A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */,
 				A790A20629E4A05100B50611 /* RockMountainApp.swift in Sources */,
 				A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */,
+				A7F40E3929E59AF100158F34 /* Show.swift in Sources */,
+				A7F40E3729E59AC700158F34 /* Artist.swift in Sources */,
 				A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

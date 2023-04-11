@@ -7,42 +7,15 @@
 
 import SwiftUI
 
-struct Show {
-    var stage: Stage
-    var startTime: Date
-    var endTime: Date
-    var day: Day
-    
-    @State var faved: Bool = false
-}
-
-struct Artist {
-    var name: String
-    var description: String
-    var image: Image
-    var shows: [Show] = []
-}
-
-struct Attraction {
-    var show: Show
-    var artist: Artist
-}
-
 struct AttractionCard: View {
-    var artist: String
-    var day: Day
-    var hourStart: String
-    var hourEnd: String
-    var stage: Stage
-    var img: Image
-    @State var faved: Bool = false
+    @State var attraction: Attraction
     
     var body: some View {
         HStack(alignment: .top) {
             NavigationLink {
                 // TODO: Go to artist's page
             } label: {
-                img
+                attraction.artist.image
                     .cornerRadius(50)
                     .padding(.trailing, 5)
                     .padding(.top, 5)
@@ -51,20 +24,20 @@ struct AttractionCard: View {
             VStack {
                 HStack {
                     VStack(alignment: .leading) {
-                        Text(artist)
+                        Text(attraction.artist.name)
                             .font(.title2)
                             .bold()
                         
-                        Text("\(day.abrev()) | \(hourStart) - \(hourEnd)")
-                        Text(stage.text())
+                        Text("\(attraction.show.day.abrev()) | \(attraction.show.formattedStartTime()) - \(attraction.show.formattedEndTime())")
+                        Text(attraction.show.stage.text())
                     }
                     
                     Spacer()
                     
                     Button {
-                        faved.toggle()
+                        attraction.show.faved.toggle()
                     } label: {
-                        Image(systemName: faved ? "staroflife.fill" : "staroflife")
+                        Image(systemName: attraction.show.faved ? "staroflife.fill" : "staroflife")
                             .resizable()
                             .frame(maxWidth: 30, maxHeight: 30)
                     }
@@ -83,6 +56,17 @@ struct AttractionCard: View {
 
 struct AttractionCard_Previews: PreviewProvider {
     static var previews: some View {
-        AttractionCard(artist: "Maria Bethânia", day: .sunday, hourStart: "21:30", hourEnd: "22:30", stage: .floresta, img: Image("img"))
+        let artist = Artist(name: "Maria Bethânia", description: "", image: Image("img"))
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let start = formatter.date(from: "2023/10/08 21:30")!
+        let end = formatter.date(from: "2023/10/08 22:30")!
+        
+        let show = Show(stage: .floresta, startTime: start, endTime: end, day: .monday)
+        
+        let attraction = Attraction(show: show, artist: artist)
+        
+        return AttractionCard(attraction: attraction)
     }
 }
