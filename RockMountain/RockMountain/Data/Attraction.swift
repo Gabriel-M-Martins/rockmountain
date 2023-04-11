@@ -6,9 +6,17 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct Attraction {
-    var show: Show
-    var artist: Artist
-    var faved: Bool
+struct Attraction: Detailable {
+    var name: String
+    var info: String
+    var favorite: Bool
+    var image: Image
+    var show: [Show]
+    var type: AttractionType
+}
+
+enum AttractionType {
+    case artist, ride
 }

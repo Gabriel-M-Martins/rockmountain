@@ -9,10 +9,11 @@ import SwiftUI
 
 struct AttractionCard: View {
     @State var attraction: Attraction
+    var showIdx: Int
     
     var body: some View {
         HStack(alignment: .top) {
-            attraction.artist.image
+            attraction.image
                 .cornerRadius(50)
                 .padding(.trailing, 5)
                 .padding(.top, 5)
@@ -20,24 +21,17 @@ struct AttractionCard: View {
             VStack {
                 HStack {
                     VStack(alignment: .leading) {
-                        Text(attraction.artist.name)
+                        Text(attraction.name)
                             .font(.title2)
                             .bold()
                         
-                        Text("\(attraction.show.day.abrev()) | \(attraction.show.formattedStartTime()) - \(attraction.show.formattedEndTime())")
-                        Text(attraction.show.stage.text())
+                        Text("\(attraction.show[showIdx].day.abrev()) | \(attraction.show[showIdx].formattedStartTime()) - \(attraction.show[showIdx].formattedEndTime())")
+                        Text(attraction.show[showIdx].stage.text())
                     }
                     
                     Spacer()
                     
-                    Button {
-                        attraction.faved.toggle()
-                    } label: {
-                        Image(systemName: attraction.faved ? "staroflife.fill" : "staroflife")
-                            .resizable()
-                            .frame(maxWidth: 30, maxHeight: 30)
-                    }
-                    .foregroundColor(Color(UIColor.label))
+                    FavoriteButton(select: $attraction.favorite)
                 }
                 
                 Divider()
@@ -52,8 +46,6 @@ struct AttractionCard: View {
 
 struct AttractionCard_Previews: PreviewProvider {
     static var previews: some View {
-        let artist = Artist(name: "Maria Bethânia", description: "", image: Image("img"))
-        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
         let start = formatter.date(from: "2023/10/08 21:30")!
@@ -61,8 +53,8 @@ struct AttractionCard_Previews: PreviewProvider {
         
         let show = Show(stage: .floresta, startTime: start, endTime: end, day: .monday)
         
-        let attraction = Attraction(show: show, artist: artist, faved: false)
+        let attraction = Attraction(name: "Maria Bethânia", info: "", favorite: false, image: Image("img"), show: [show], type: .artist)
         
-        return AttractionCard(attraction: attraction)
+        return AttractionCard(attraction: attraction, showIdx: 0)
     }
 }
