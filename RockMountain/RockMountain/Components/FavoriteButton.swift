@@ -17,7 +17,7 @@ struct FavoriteButton: View {
                 .resizable()
                 .frame(maxWidth: 30, maxHeight: 30)
         }
-        .foregroundColor(Color(UIColor.label))
+        .buttonStyle(PlainButtonStyle())
     }
 }
 
