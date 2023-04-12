@@ -10,7 +10,7 @@ import SwiftUI
 struct RestaurantCard: View {
     
     
-    var restaurant = Restaurant(image: Image("Amazonika"), name: "Amazonika", items: [])
+    var restaurant = Restaurant(image: Image("Amazonika"), name: "Amazonika", favorite: false, info: "Comidas amazonikas!")
     
     var body: some View {
         
@@ -37,6 +37,6 @@ struct RestaurantCard: View {
 
 struct RestaurantCard_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantCard(restaurant: Restaurant(image: Image("Amazonika"), name: "Amazonika"))
+        RestaurantCard(restaurant: Restaurant(image: Image("Amazonika"), name: "Amazonika", favorite: false, info: "Comidas amazonikas!"))
     }
 }
