@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AttractionView: View {
     @State var searchText = ""
+    @State var filterActive = false
     
     var placeholder: Attraction {
         let formatter = DateFormatter()
@@ -30,6 +31,42 @@ struct AttractionView: View {
     var body: some View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
+                HStack {
+                    TextField("Procurar", text: $searchText)
+                        .padding(.horizontal)
+                        .frame(height: 45)
+                        .background(.ultraThinMaterial)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding()
+                        .overlay {
+                            HStack {
+                                Spacer()
+                                
+                                Button {
+                                    searchText = ""
+                                } label: {
+                                    Label("clear", systemImage: "xmark")
+                                        .foregroundColor(.gray)
+                                        .opacity(searchText.isEmpty ? 0 : 1)
+                                        .padding(30)
+                                        .animation(.easeInOut, value: searchText.isEmpty)
+                                }
+                                .labelStyle(.iconOnly)
+                            }
+                        }
+                    
+                    Button {
+                        filterActive.toggle()
+                    } label: {
+                        Image(systemName: filterActive ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
+                            .font(.title)
+                    }
+                    .padding(.leading, -10)
+                    .padding(.trailing)
+                }
+                
+                
+                
                 VStack {
                     Divider()
                         .navigationTitle("Atrações")
@@ -44,15 +81,12 @@ struct AttractionView: View {
                     }
                 }
                 .background(.ultraThinMaterial)
-                .cornerRadius(20)
+                .cornerRadius(10)
                 .shadow(color: Color.black.opacity(0.2), radius: 4)
                 .padding(.horizontal)
-                
             }
-            
         }
-        .accentColor(.white)
-        .searchable(text: $searchText)
+        .accentColor(Color(UIColor.label))
     }
 }
 
