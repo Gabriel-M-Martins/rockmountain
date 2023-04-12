@@ -17,12 +17,15 @@
 		A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */; };
 		A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3429E59AB100158F34 /* Attraction.swift */; };
 		A7F40E3929E59AF100158F34 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3829E59AF100158F34 /* Show.swift */; };
-		B1333F6E29E5C75700E95859 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F6D29E5C75700E95859 /* Restaurant.swift */; };
-		B1333F7029E5C8A000E95859 /* RestaurantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F6F29E5C89F00E95859 /* RestaurantsView.swift */; };
-		B1333F7429E5CEAC00E95859 /* RestaurantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F7329E5CEAC00E95859 /* RestaurantDetail.swift */; };
+		B1333F6E29E5C75700E95859 /* RestaurantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F6D29E5C75700E95859 /* RestaurantCard.swift */; };
+		B1333F7029E5C8A000E95859 /* RestaurantGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F6F29E5C89F00E95859 /* RestaurantGridView.swift */; };
+		B1333F7429E5CEAC00E95859 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F7329E5CEAC00E95859 /* RestaurantDetailView.swift */; };
 		B1D0835A29E5D9090089B987 /* RockMountainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0835729E5D9090089B987 /* RockMountainApp.swift */; };
 		B1D0835B29E5D9090089B987 /* ImageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0835829E5D9090089B987 /* ImageHeader.swift */; };
 		B1D0835C29E5D9090089B987 /* AttractionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0835929E5D9090089B987 /* AttractionCard.swift */; };
+		B1D61EF029E5E021007F4099 /* MenuItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D61EEF29E5E021007F4099 /* MenuItemCard.swift */; };
+		B1D61EF229E5E77E007F4099 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D61EF129E5E77E007F4099 /* Restaurant.swift */; };
+		B1D61EF429E5E7BD007F4099 /* RestaurantMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D61EF329E5E7BD007F4099 /* RestaurantMenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,12 +40,15 @@
 		A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailsView.swift; sourceTree = "<group>"; };
 		A7F40E3429E59AB100158F34 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 		A7F40E3829E59AF100158F34 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
-		B1333F6D29E5C75700E95859 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		B1333F6F29E5C89F00E95859 /* RestaurantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsView.swift; sourceTree = "<group>"; };
-		B1333F7329E5CEAC00E95859 /* RestaurantDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetail.swift; sourceTree = "<group>"; };
+		B1333F6D29E5C75700E95859 /* RestaurantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCard.swift; sourceTree = "<group>"; };
+		B1333F6F29E5C89F00E95859 /* RestaurantGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantGridView.swift; sourceTree = "<group>"; };
+		B1333F7329E5CEAC00E95859 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		B1D0835729E5D9090089B987 /* RockMountainApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockMountainApp.swift; sourceTree = "<group>"; };
 		B1D0835829E5D9090089B987 /* ImageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHeader.swift; sourceTree = "<group>"; };
 		B1D0835929E5D9090089B987 /* AttractionCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionCard.swift; sourceTree = "<group>"; };
+		B1D61EEF29E5E021007F4099 /* MenuItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCard.swift; sourceTree = "<group>"; };
+		B1D61EF129E5E77E007F4099 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		B1D61EF329E5E7BD007F4099 /* RestaurantMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				B1D0835929E5D9090089B987 /* AttractionCard.swift */,
-				B1333F6D29E5C75700E95859 /* Restaurant.swift */,
+				B1333F6D29E5C75700E95859 /* RestaurantCard.swift */,
 				B1D0835829E5D9090089B987 /* ImageHeader.swift */,
 				B1D0835729E5D9090089B987 /* RockMountainApp.swift */,
+				B1D61EEF29E5E021007F4099 /* MenuItemCard.swift */,
 				A79EA04129E5EA6F00C68336 /* FavoriteButton.swift */,
 			);
 			path = Components;
@@ -120,6 +127,8 @@
 				A7AE13AA29E4EC4D00AAB0CF /* Day.swift */,
 				A7F40E3429E59AB100158F34 /* Attraction.swift */,
 				A7F40E3829E59AF100158F34 /* Show.swift */,
+				B1D61EF129E5E77E007F4099 /* Restaurant.swift */,
+				B1D61EF329E5E7BD007F4099 /* RestaurantMenuItem.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -128,9 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */,
-				B1333F6F29E5C89F00E95859 /* RestaurantsView.swift */,
-				B1333F7329E5CEAC00E95859 /* RestaurantDetail.swift */,
-				A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */,
+				B1333F6F29E5C89F00E95859 /* RestaurantGridView.swift */,
+				B1333F7329E5CEAC00E95859 /* RestaurantDetailView.swift */,
+                A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,15 +214,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1333F6E29E5C75700E95859 /* Restaurant.swift in Sources */,
-				B1333F7429E5CEAC00E95859 /* RestaurantDetail.swift in Sources */,
-				B1333F7029E5C8A000E95859 /* RestaurantsView.swift in Sources */,
+				B1D61EF029E5E021007F4099 /* MenuItemCard.swift in Sources */,
+				B1333F6E29E5C75700E95859 /* RestaurantCard.swift in Sources */,
+				B1333F7429E5CEAC00E95859 /* RestaurantDetailView.swift in Sources */,
+				B1333F7029E5C8A000E95859 /* RestaurantGridView.swift in Sources */,
 				A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */,
 				A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */,
 				B1D0835B29E5D9090089B987 /* ImageHeader.swift in Sources */,
 				A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */,
+				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
 				A7F40E3929E59AF100158F34 /* Show.swift in Sources */,
 				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
+				B1D61EF229E5E77E007F4099 /* Restaurant.swift in Sources */,
+				B1D61EF429E5E7BD007F4099 /* RestaurantMenuItem.swift in Sources */,
 				A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */,
 				B1D0835C29E5D9090089B987 /* AttractionCard.swift in Sources */,
 				B1D0835A29E5D9090089B987 /* RockMountainApp.swift in Sources */,

@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct Restaurant: View, Hashable {
+struct RestaurantCard: View {
     
-    var image: String
-    var name: String
+    
+    var restaurant = Restaurant(image: Image("Amazonika"), name: "Amazonika", favorite: false, info: "Comidas amazonikas!")
     
     var body: some View {
         
         ZStack {
-            Image(image)
+            restaurant.image
                 .resizable()
                 .frame(width: 175, height: 175)
                 .cornerRadius(14)
@@ -26,7 +26,7 @@ struct Restaurant: View, Hashable {
                 .cornerRadius(14)
                 .opacity(0.5)
             
-            Text(name)
+            Text(restaurant.name)
                 .font(.title2)
                 .bold()
                 .foregroundColor(.white)
@@ -35,8 +35,8 @@ struct Restaurant: View, Hashable {
     }
 }
 
-struct Restaurant_Previews: PreviewProvider {
+struct RestaurantCard_Previews: PreviewProvider {
     static var previews: some View {
-        Restaurant(image: "VeganTI", name: "Vegan TI")
+        RestaurantCard(restaurant: Restaurant(image: Image("Amazonika"), name: "Amazonika", favorite: false, info: "Comidas amazonikas!"))
     }
 }
