@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ImageHeader: View {
-    var image: Image
-    var title: String
-    var favable: Bool = false
+    @State var details: Detailable
+    var favoritable: Bool = false
     
     var body: some View {
         ZStack {
-            image
+            details.image
                 .resizable()
                 .scaledToFill()
             
@@ -25,13 +24,12 @@ struct ImageHeader: View {
                 Spacer()
                 
                 HStack {
-                    Text(title)
+                    Text(details.name)
                     
                     Spacer()
                     
-                    if favable {
-                        Image(systemName: "staroflife")
-                        
+                    if favoritable {
+                        FavoriteButton(select: $details.favorite)
                     }
                 }
                 .font(.title)
@@ -47,6 +45,8 @@ struct ImageHeader: View {
 
 struct ImageHeader_Previews: PreviewProvider {
     static var previews: some View {
-        ImageHeader(image: Image("img"), title: "placeholder")
+        let attraction = Attraction(name: "Maria Bethania", info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", favorite: false, image: Image("img"), show: [], type: .artist)
+        
+        ImageHeader(details: attraction)
     }
 }
