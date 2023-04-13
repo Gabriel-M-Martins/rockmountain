@@ -11,8 +11,7 @@ import SwiftUI
 struct RockMountainApp: App {
     var body: some Scene {
         WindowGroup {
-//            AttractionView()
-             MapView()
+            MainView()
         }
     }
 }
