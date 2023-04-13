@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73FA3D1929E72AFD0094906D /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1829E72AFD0094906D /* OnBoardingView.swift */; };
+		73FA3D1B29E72B350094906D /* Welcome1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1A29E72B350094906D /* Welcome1View.swift */; };
+		73FA3D1D29E72B670094906D /* Welcome2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1C29E72B670094906D /* Welcome2View.swift */; };
+		73FA3D1F29E72B910094906D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1E29E72B910094906D /* EventsView.swift */; };
 		A790A20A29E4A05100B50611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790A20929E4A05100B50611 /* Assets.xcassets */; };
 		A790A20D29E4A05100B50611 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790A20C29E4A05100B50611 /* Preview Assets.xcassets */; };
 		A79EA04029E5E4E200C68336 /* Detailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EA03F29E5E4E200C68336 /* Detailable.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73FA3D1829E72AFD0094906D /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		73FA3D1A29E72B350094906D /* Welcome1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome1View.swift; sourceTree = "<group>"; };
+		73FA3D1C29E72B670094906D /* Welcome2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome2View.swift; sourceTree = "<group>"; };
+		73FA3D1E29E72B910094906D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		A790A20229E4A05100B50611 /* RockMountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockMountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A790A20929E4A05100B50611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A790A20C29E4A05100B50611 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -139,7 +147,11 @@
 				A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */,
 				B1333F6F29E5C89F00E95859 /* RestaurantGridView.swift */,
 				B1333F7329E5CEAC00E95859 /* RestaurantDetailView.swift */,
-                A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */,
+				A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */,
+				73FA3D1829E72AFD0094906D /* OnBoardingView.swift */,
+				73FA3D1A29E72B350094906D /* Welcome1View.swift */,
+				73FA3D1C29E72B670094906D /* Welcome2View.swift */,
+				73FA3D1E29E72B910094906D /* EventsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,14 +230,18 @@
 				B1333F6E29E5C75700E95859 /* RestaurantCard.swift in Sources */,
 				B1333F7429E5CEAC00E95859 /* RestaurantDetailView.swift in Sources */,
 				B1333F7029E5C8A000E95859 /* RestaurantGridView.swift in Sources */,
+				73FA3D1D29E72B670094906D /* Welcome2View.swift in Sources */,
 				A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */,
 				A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */,
 				B1D0835B29E5D9090089B987 /* ImageHeader.swift in Sources */,
 				A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */,
+				73FA3D1F29E72B910094906D /* EventsView.swift in Sources */,
 				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
 				A7F40E3929E59AF100158F34 /* Show.swift in Sources */,
+				73FA3D1929E72AFD0094906D /* OnBoardingView.swift in Sources */,
 				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
 				B1D61EF229E5E77E007F4099 /* Restaurant.swift in Sources */,
+				73FA3D1B29E72B350094906D /* Welcome1View.swift in Sources */,
 				B1D61EF429E5E7BD007F4099 /* RestaurantMenuItem.swift in Sources */,
 				A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */,
 				B1D0835C29E5D9090089B987 /* AttractionCard.swift in Sources */,
@@ -360,7 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RockMountain/Preview Content\"";
-				DEVELOPMENT_TEAM = 73DNAYF2TM;
+				DEVELOPMENT_TEAM = 7M3927V7ZA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -389,7 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RockMountain/Preview Content\"";
-				DEVELOPMENT_TEAM = 73DNAYF2TM;
+				DEVELOPMENT_TEAM = 7M3927V7ZA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
