@@ -11,14 +11,14 @@ struct AttractionDetailsView: View {
     var attraction: Attraction
     var body: some View {
         ScrollView {
-            VStack {
                 ImageHeader(details: attraction, favoritable: true)
+                
+                Spacer()
+                
+                Text(attraction.info)
+                    .padding(.horizontal)
+                    .padding(.vertical, 5)
             }
-            
-            Text(attraction.info)
-                .padding(.horizontal)
-                .padding(.vertical, 5)
-        }
         .edgesIgnoringSafeArea(.top)
     }
 }

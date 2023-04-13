@@ -13,43 +13,53 @@ struct PopUpCard<T: Filter>: View {
     @Binding var filters: [T]
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                Spacer()
-                
-                ForEach(Array(T.allCases), id: \.title) { filter in
-                    HStack {
-                        Spacer()
-                        
-                        Button {
-                            if let idx = filters.firstIndex(where: {$0.title == filter.title}) {
-                                filters.remove(at: idx)
-                            } else {
-                                filters.append(filter)
+        VStack {
+            Divider()
+                .padding(.horizontal, width * 0.45)
+            
+            Text("Ordenar por")
+                .font(.title2)
+            
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    Spacer()
+                    
+                    ForEach(Array(T.allCases), id: \.self) { filter in
+                        HStack {
+                            Spacer()
+                            
+                            Button {
+                                if let idx = filters.firstIndex(where: {$0.title == filter.title}) {
+                                    filters.remove(at: idx)
+                                } else {
+                                    filters.append(filter)
+                                }
+                            } label: {
+                                VStack {
+                                    Image(filter.imageName)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: 100)
+                                        .clipShape(Circle())
+                                    
+                                    Text(filter.title)
+                                }
                             }
-                        } label: {
-                            VStack {
-                                Image(filter.imageName)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(maxHeight: 75)
-                                    .cornerRadius(37.5)
-                                
-                                Text(filter.title)
-                            }
+                            .opacity(filters.contains(where: {$0.title == filter.title}) ? 0.5 : 1)
+                            .buttonStyle(PlainButtonStyle())
+                            
+                            Spacer()
                         }
-                        .opacity(filters.contains(where: {$0.title == filter.title}) ? 0.5 : 1)
-                        .buttonStyle(PlainButtonStyle())
-                        
-                        Spacer()
                     }
+                    Spacer()
                 }
-                Spacer()
+                .frame(width: width)
+                .padding(.trailing)
             }
-            .frame(width: width)
-            .padding(.trailing)
+            .padding(.top)
         }
-        .padding(.top)
+        .padding(.top, -30)
         .presentationDetents([.height(height)])
         .presentationDragIndicator(.hidden)
     }

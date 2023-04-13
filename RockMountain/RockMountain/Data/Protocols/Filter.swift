@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Filter: CaseIterable {
+protocol Filter: CaseIterable, Hashable {
     var title: String { get }
     var imageName: String { get }
 }

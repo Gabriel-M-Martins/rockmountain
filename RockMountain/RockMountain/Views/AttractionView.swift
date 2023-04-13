@@ -66,10 +66,11 @@ struct AttractionView: View {
                         } label: {
                             Image(systemName: filterActive ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
                                 .font(.title)
-                                .animation(.linear(duration: 0.15), value: filterActive)
+                                .animation(.linear(duration: 0.1), value: filterActive)
+                            
                         }
                         .sheet(isPresented: $showPopup, onDismiss: {filterActive = !filters.isEmpty}) {
-                            PopUpCard(height: reader.size.height * 0.2, width: reader.size.width, filters: $filters)
+                            PopUpCard(height: reader.size.height * 0.4, width: reader.size.width, filters: $filters)
                         }
                         .padding(.leading, -10)
                         .padding(.trailing)
