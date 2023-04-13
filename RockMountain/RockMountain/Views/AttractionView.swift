@@ -10,6 +10,8 @@ import SwiftUI
 struct AttractionView: View {
     @State var searchText = ""
     @State var filterActive = false
+    @State var showPopup = false
+    @State var filters: [AttractionFilter] = []
     
     var placeholder: Attraction {
         let formatter = DateFormatter()
@@ -30,63 +32,72 @@ struct AttractionView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView(showsIndicators: false) {
-                HStack {
-                    TextField("Procurar", text: $searchText)
-                        .padding(.horizontal)
-                        .frame(height: 45)
-                        .background(.ultraThinMaterial)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .padding()
-                        .overlay {
-                            HStack {
-                                Spacer()
-                                
-                                Button {
-                                    searchText = ""
-                                } label: {
-                                    Label("clear", systemImage: "xmark")
-                                        .foregroundColor(.gray)
-                                        .opacity(searchText.isEmpty ? 0 : 1)
-                                        .padding(30)
-                                        .animation(.easeInOut, value: searchText.isEmpty)
-                                }
-                                .labelStyle(.iconOnly)
-                            }
-                        }
-                    
-                    Button {
-                        filterActive.toggle()
-                    } label: {
-                        Image(systemName: filterActive ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
-                            .font(.title)
-                    }
-                    .padding(.leading, -10)
-                    .padding(.trailing)
-                }
-                
-                
-                
-                VStack {
+            GeometryReader { reader in
+                ScrollView(showsIndicators: false) {
                     Divider()
-                        .navigationTitle("Atrações")
+                        .padding(.horizontal)
                     
-                    ForEach((1...20), id: \.self) { value in
-                        NavigationLink {
-                            AttractionDetailsView(attraction: placeholder)
+                    HStack {
+                        TextField("Procurar", text: $searchText)
+                            .padding(.horizontal)
+                            .frame(height: 45)
+                            .background(.ultraThinMaterial)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .padding()
+                            .overlay {
+                                HStack {
+                                    Spacer()
+                                    
+                                    Button {
+                                        searchText = ""
+                                    } label: {
+                                        Label("clear", systemImage: "xmark")
+                                            .foregroundColor(.gray)
+                                            .opacity(searchText.isEmpty ? 0 : 1)
+                                            .padding(30)
+                                            .animation(.easeInOut, value: searchText.isEmpty)
+                                    }
+                                    .labelStyle(.iconOnly)
+                                }
+                            }
+                        
+                        Button {
+                            showPopup.toggle()
                         } label: {
-                            AttractionCard(attraction: placeholder, showIdx: 0)
+                            Image(systemName: filterActive ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
+                                .font(.title)
+                                .animation(.linear(duration: 0.15), value: filterActive)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .sheet(isPresented: $showPopup, onDismiss: {filterActive = !filters.isEmpty}) {
+                            PopUpCard(height: reader.size.height * 0.2, width: reader.size.width, filters: $filters)
+                        }
+                        .padding(.leading, -10)
+                        .padding(.trailing)
                     }
+                    .padding(.top, -13)
+                    
+                    
+                    VStack {
+                        Divider()
+                            .navigationTitle("Atrações")
+                        
+                        ForEach((1...20), id: \.self) { value in
+                            NavigationLink {
+                                AttractionDetailsView(attraction: placeholder)
+                            } label: {
+                                AttractionCard(attraction: placeholder, showIdx: 0)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
+                    }
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(10)
+                    .shadow(color: Color.black.opacity(0.2), radius: 4)
+                    .padding(.horizontal)
                 }
-                .background(.ultraThinMaterial)
-                .cornerRadius(10)
-                .shadow(color: Color.black.opacity(0.2), radius: 4)
-                .padding(.horizontal)
             }
+            .accentColor(Color(UIColor.label))
         }
-        .accentColor(Color(UIColor.label))
     }
 }
 
