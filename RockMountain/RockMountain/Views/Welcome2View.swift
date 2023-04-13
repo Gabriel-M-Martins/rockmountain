@@ -41,7 +41,7 @@ struct Welcome2View: View {
             VStack {
                 Spacer()
                 
-                NavigationLink(destination: Events()) {
+                NavigationLink(destination: EventsView()) {
                     Text("Começar")
                         .padding()
                         .foregroundColor(.blue)
