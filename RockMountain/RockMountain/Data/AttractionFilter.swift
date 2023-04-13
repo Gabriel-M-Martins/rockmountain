@@ -8,7 +8,7 @@
 import Foundation
 
 enum AttractionFilter: Filter {
-    case hour, stage, day, artist
+    case hour, stage, day
     
     var title: String {
         switch self {
@@ -18,8 +18,6 @@ enum AttractionFilter: Filter {
             return "Palco"
         case .hour:
             return "Hora"
-        case .artist:
-            return "Artista"
         }
     }
     
@@ -31,8 +29,6 @@ enum AttractionFilter: Filter {
         case .stage:
             return "img"
         case .hour:
-            return "img"
-        case .artist:
             return "img"
         }
     }
