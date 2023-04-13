@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73FA3D1929E72AFD0094906D /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1829E72AFD0094906D /* OnBoardingView.swift */; };
+		73FA3D1B29E72B350094906D /* Welcome1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1A29E72B350094906D /* Welcome1View.swift */; };
+		73FA3D1D29E72B670094906D /* Welcome2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1C29E72B670094906D /* Welcome2View.swift */; };
+		73FA3D1F29E72B910094906D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1E29E72B910094906D /* EventsView.swift */; };
 		A790A20A29E4A05100B50611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790A20929E4A05100B50611 /* Assets.xcassets */; };
 		A790A20D29E4A05100B50611 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790A20C29E4A05100B50611 /* Preview Assets.xcassets */; };
 		A79EA04029E5E4E200C68336 /* Detailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EA03F29E5E4E200C68336 /* Detailable.swift */; };
@@ -15,6 +19,9 @@
 		A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AC29E4EC7100AAB0CF /* Stage.swift */; };
 		A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */; };
 		A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */; };
+		A7C7AA1129E7521500E5F998 /* PopUpCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7AA1029E7521500E5F998 /* PopUpCard.swift */; };
+		A7C7AA1329E7870800E5F998 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7AA1229E7870800E5F998 /* Filter.swift */; };
+		A7C7AA1529E7872F00E5F998 /* AttractionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7AA1429E7872F00E5F998 /* AttractionFilter.swift */; };
 		A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3429E59AB100158F34 /* Attraction.swift */; };
 		A7F40E3929E59AF100158F34 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3829E59AF100158F34 /* Show.swift */; };
 		B1333F6E29E5C75700E95859 /* RestaurantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F6D29E5C75700E95859 /* RestaurantCard.swift */; };
@@ -32,6 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73FA3D1829E72AFD0094906D /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		73FA3D1A29E72B350094906D /* Welcome1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome1View.swift; sourceTree = "<group>"; };
+		73FA3D1C29E72B670094906D /* Welcome2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome2View.swift; sourceTree = "<group>"; };
+		73FA3D1E29E72B910094906D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		A790A20229E4A05100B50611 /* RockMountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockMountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A790A20929E4A05100B50611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A790A20C29E4A05100B50611 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -41,6 +52,9 @@
 		A7AE13AC29E4EC7100AAB0CF /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionView.swift; sourceTree = "<group>"; };
 		A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailsView.swift; sourceTree = "<group>"; };
+		A7C7AA1029E7521500E5F998 /* PopUpCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpCard.swift; sourceTree = "<group>"; };
+		A7C7AA1229E7870800E5F998 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		A7C7AA1429E7872F00E5F998 /* AttractionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionFilter.swift; sourceTree = "<group>"; };
 		A7F40E3429E59AB100158F34 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 		A7F40E3829E59AF100158F34 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		B1333F6D29E5C75700E95859 /* RestaurantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCard.swift; sourceTree = "<group>"; };
@@ -74,10 +88,10 @@
 				B1D0835929E5D9090089B987 /* AttractionCard.swift */,
 				B1333F6D29E5C75700E95859 /* RestaurantCard.swift */,
 				B1D0835829E5D9090089B987 /* ImageHeader.swift */,
-				B1D0835729E5D9090089B987 /* RockMountainApp.swift */,
 				B1D61EEF29E5E021007F4099 /* MenuItemCard.swift */,
 				A79EA04129E5EA6F00C68336 /* FavoriteButton.swift */,
 				B1D5953829E73CD800CAA5D3 /* ZoomableScrollView.swift */,
+				A7C7AA1029E7521500E5F998 /* PopUpCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -101,6 +115,7 @@
 		A790A20429E4A05100B50611 /* RockMountain */ = {
 			isa = PBXGroup;
 			children = (
+				B1D0835729E5D9090089B987 /* RockMountainApp.swift */,
 				B1333F7129E5C92200E95859 /* Views */,
 				A714458829E5C56500164CF2 /* Components */,
 				A7F40E3329E59A8C00158F34 /* Data */,
@@ -122,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A79EA03F29E5E4E200C68336 /* Detailable.swift */,
+				A7C7AA1229E7870800E5F998 /* Filter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -136,6 +152,7 @@
 				A7F40E3829E59AF100158F34 /* Show.swift */,
 				B1D61EF129E5E77E007F4099 /* Restaurant.swift */,
 				B1D61EF329E5E7BD007F4099 /* RestaurantMenuItem.swift */,
+				A7C7AA1429E7872F00E5F998 /* AttractionFilter.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -149,6 +166,10 @@
 				A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */,
 				B1D5953429E72B0700CAA5D3 /* MapView.swift */,
 				B1D5953629E72DF600CAA5D3 /* BigMapView.swift */,
+				73FA3D1829E72AFD0094906D /* OnBoardingView.swift */,
+				73FA3D1A29E72B350094906D /* Welcome1View.swift */,
+				73FA3D1C29E72B670094906D /* Welcome2View.swift */,
+				73FA3D1E29E72B910094906D /* EventsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,23 +245,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1D61EF029E5E021007F4099 /* MenuItemCard.swift in Sources */,
+				A7C7AA1329E7870800E5F998 /* Filter.swift in Sources */,
 				B1333F6E29E5C75700E95859 /* RestaurantCard.swift in Sources */,
 				B1333F7429E5CEAC00E95859 /* RestaurantDetailView.swift in Sources */,
 				B1333F7029E5C8A000E95859 /* RestaurantGridView.swift in Sources */,
+				73FA3D1D29E72B670094906D /* Welcome2View.swift in Sources */,
 				A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */,
 				A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */,
+				A7C7AA1129E7521500E5F998 /* PopUpCard.swift in Sources */,
 				B1D0835B29E5D9090089B987 /* ImageHeader.swift in Sources */,
 				B1D5953929E73CD800CAA5D3 /* ZoomableScrollView.swift in Sources */,
 				A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */,
+				73FA3D1F29E72B910094906D /* EventsView.swift in Sources */,
 				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
 				A7F40E3929E59AF100158F34 /* Show.swift in Sources */,
 				B1D5953729E72DF600CAA5D3 /* BigMapView.swift in Sources */,
+				73FA3D1929E72AFD0094906D /* OnBoardingView.swift in Sources */,
 				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
 				B1D61EF229E5E77E007F4099 /* Restaurant.swift in Sources */,
+				73FA3D1B29E72B350094906D /* Welcome1View.swift in Sources */,
 				B1D61EF429E5E7BD007F4099 /* RestaurantMenuItem.swift in Sources */,
 				A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */,
 				B1D0835C29E5D9090089B987 /* AttractionCard.swift in Sources */,
 				B1D5953529E72B0700CAA5D3 /* MapView.swift in Sources */,
+				A7C7AA1529E7872F00E5F998 /* AttractionFilter.swift in Sources */,
 				B1D0835A29E5D9090089B987 /* RockMountainApp.swift in Sources */,
 				A79EA04029E5E4E200C68336 /* Detailable.swift in Sources */,
 				A79EA04229E5EA6F00C68336 /* FavoriteButton.swift in Sources */,
@@ -372,14 +400,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RockMountain/Preview Content\"";
-				DEVELOPMENT_TEAM = 3BP9463775;
+				DEVELOPMENT_TEAM = 7M3927V7ZA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -402,14 +430,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RockMountain/Preview Content\"";
-				DEVELOPMENT_TEAM = 3BP9463775;
+				DEVELOPMENT_TEAM = 7M3927V7ZA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
