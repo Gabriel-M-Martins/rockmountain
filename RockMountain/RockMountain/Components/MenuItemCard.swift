@@ -9,62 +9,40 @@ import SwiftUI
 
 struct MenuItemCard: View {
     
-    let image : String
-    let name : String
-    let description : String
-    let price : String
+    let item: RestaurantMenuItem
     
     var body: some View {
         
-        VStack {
+        HStack(alignment: .top) {
             
-            Divider()
-            HStack {
+            VStack(alignment: .leading, spacing: 7) {
+                Text(item.name)
+                    .bold()
                 
-                Image(image)
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .cornerRadius(50)
+                Text(item.description)
+                    .font(.subheadline)
                 
-                VStack {
-                
-                    HStack {
-                        Text(name)
-                            .font(.title)
-                            .bold()
-                        
-                        Spacer()
-                        Image(systemName: "dollarsign")
-                            .bold()
-                        
-                        Text(price)
-                            .font(.title3)
-                            .bold()
-                        
-                        Spacer()
-                    }
-                        
-                    HStack {
-                        Text(description)
-                            .font(.subheadline)
-                            .bold()
-                        Spacer()
-                    }
-                    
-                }
             }
-            .padding()
             
-            Divider()
-
+            Spacer()
+            
+            HStack {
+                Image(systemName: "dollarsign")
+                Text(item.price)
+                    .bold()
+            }
+            
+            
+            
         }
-        
+        .padding(.horizontal, 25)
+        .padding(.vertical, 8)
         
     }
 }
 
 struct MenuItemCard_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItemCard(image: "Fitzza", name: "Fitzza", description: "Descricao do item do cardapiooooooooooooooooooooooo", price: "35,50")
+        MenuItemCard(item: RestaurantMenuItem(name: "Almondegas de Lentilha (6und)", description: "Esta porção serve até 2 pessoas", price: "22,00"))
     }
 }

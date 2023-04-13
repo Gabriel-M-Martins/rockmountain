@@ -23,6 +23,9 @@
 		B1D0835A29E5D9090089B987 /* RockMountainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0835729E5D9090089B987 /* RockMountainApp.swift */; };
 		B1D0835B29E5D9090089B987 /* ImageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0835829E5D9090089B987 /* ImageHeader.swift */; };
 		B1D0835C29E5D9090089B987 /* AttractionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0835929E5D9090089B987 /* AttractionCard.swift */; };
+		B1D5953529E72B0700CAA5D3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5953429E72B0700CAA5D3 /* MapView.swift */; };
+		B1D5953729E72DF600CAA5D3 /* BigMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5953629E72DF600CAA5D3 /* BigMapView.swift */; };
+		B1D5953929E73CD800CAA5D3 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5953829E73CD800CAA5D3 /* ZoomableScrollView.swift */; };
 		B1D61EF029E5E021007F4099 /* MenuItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D61EEF29E5E021007F4099 /* MenuItemCard.swift */; };
 		B1D61EF229E5E77E007F4099 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D61EF129E5E77E007F4099 /* Restaurant.swift */; };
 		B1D61EF429E5E7BD007F4099 /* RestaurantMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D61EF329E5E7BD007F4099 /* RestaurantMenuItem.swift */; };
@@ -46,6 +49,9 @@
 		B1D0835729E5D9090089B987 /* RockMountainApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockMountainApp.swift; sourceTree = "<group>"; };
 		B1D0835829E5D9090089B987 /* ImageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHeader.swift; sourceTree = "<group>"; };
 		B1D0835929E5D9090089B987 /* AttractionCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionCard.swift; sourceTree = "<group>"; };
+		B1D5953429E72B0700CAA5D3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B1D5953629E72DF600CAA5D3 /* BigMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigMapView.swift; sourceTree = "<group>"; };
+		B1D5953829E73CD800CAA5D3 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
 		B1D61EEF29E5E021007F4099 /* MenuItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCard.swift; sourceTree = "<group>"; };
 		B1D61EF129E5E77E007F4099 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		B1D61EF329E5E7BD007F4099 /* RestaurantMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuItem.swift; sourceTree = "<group>"; };
@@ -71,6 +77,7 @@
 				B1D0835729E5D9090089B987 /* RockMountainApp.swift */,
 				B1D61EEF29E5E021007F4099 /* MenuItemCard.swift */,
 				A79EA04129E5EA6F00C68336 /* FavoriteButton.swift */,
+				B1D5953829E73CD800CAA5D3 /* ZoomableScrollView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -139,7 +146,9 @@
 				A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */,
 				B1333F6F29E5C89F00E95859 /* RestaurantGridView.swift */,
 				B1333F7329E5CEAC00E95859 /* RestaurantDetailView.swift */,
-                A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */,
+				A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */,
+				B1D5953429E72B0700CAA5D3 /* MapView.swift */,
+				B1D5953629E72DF600CAA5D3 /* BigMapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,14 +230,17 @@
 				A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */,
 				A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */,
 				B1D0835B29E5D9090089B987 /* ImageHeader.swift in Sources */,
+				B1D5953929E73CD800CAA5D3 /* ZoomableScrollView.swift in Sources */,
 				A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */,
 				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
 				A7F40E3929E59AF100158F34 /* Show.swift in Sources */,
+				B1D5953729E72DF600CAA5D3 /* BigMapView.swift in Sources */,
 				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
 				B1D61EF229E5E77E007F4099 /* Restaurant.swift in Sources */,
 				B1D61EF429E5E7BD007F4099 /* RestaurantMenuItem.swift in Sources */,
 				A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */,
 				B1D0835C29E5D9090089B987 /* AttractionCard.swift in Sources */,
+				B1D5953529E72B0700CAA5D3 /* MapView.swift in Sources */,
 				B1D0835A29E5D9090089B987 /* RockMountainApp.swift in Sources */,
 				A79EA04029E5E4E200C68336 /* Detailable.swift in Sources */,
 				A79EA04229E5EA6F00C68336 /* FavoriteButton.swift in Sources */,
@@ -360,7 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RockMountain/Preview Content\"";
-				DEVELOPMENT_TEAM = 73DNAYF2TM;
+				DEVELOPMENT_TEAM = 3BP9463775;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -368,6 +380,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,7 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RockMountain/Preview Content\"";
-				DEVELOPMENT_TEAM = 73DNAYF2TM;
+				DEVELOPMENT_TEAM = 3BP9463775;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -397,6 +410,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
