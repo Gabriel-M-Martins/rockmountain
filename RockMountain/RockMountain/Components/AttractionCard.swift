@@ -50,13 +50,6 @@ struct AttractionCard: View {
 
 struct AttractionCard_Previews: PreviewProvider {
     static var previews: some View {
-        let date = DateParser.createDate(time: (19, 30), day: .monday, year: 2023)!
-        let dateInterval = DateParser.createDateInterval(start: date, duration: (1, 0))
-        
-        let show = Show(stage: .floresta, day: .monday, date: dateInterval)
-        
-        let attraction = Attraction(name: "Maria Bethânia", info: "", favorite: false, image: Image("img"), show: [show], type: .artist)
-        
-        return AttractionCard(attraction: .constant(attraction), showIdx: 0)
+        return AttractionCard(attraction: .constant(attractionPlaceholder), showIdx: 0)
     }
 }

@@ -15,9 +15,4 @@ struct Attraction: Detailable, Identifiable {
     var favorite: Bool
     var image: Image
     var show: [Show]
-    var type: AttractionType
-}
-
-enum AttractionType {
-    case artist, ride
 }
