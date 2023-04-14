@@ -30,7 +30,8 @@ struct MainView: View {
                         .tabItem {
                             Label("Bar", systemImage: "takeoutbag.and.cup.and.straw")
                         }
-                    RestaurantGridView()
+                    
+                    FavoritesView()
                         .tabItem {
                             Label("Favoritos", systemImage: "staroflife")
                         }

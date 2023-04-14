@@ -23,12 +23,24 @@ struct FavoritesView: View {
     }
     
     var body: some View {
-        NavigationStack {
             GeometryReader { reader in
                 ScrollView {
+//                    Divider()
+//                        .padding(.horizontal)
+//                        .navigationTitle("Favoritos")
+                    
+                    HStack {
+                        Text("Favoritos")
+                            .font(.largeTitle)
+                            .bold()
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 15)
+                    
                     Divider()
                         .padding(.horizontal)
-                        .navigationTitle("Favoritos")
                     
                     SearchBar(searchText: $searchText, filter: $filter, size: CGSize(width: reader.size.width, height: reader.size.height * 0.4))
                     
@@ -64,8 +76,7 @@ struct FavoritesView: View {
                     .padding(.bottom)
                 }
             }
-        }
-        .buttonStyle(PlainButtonStyle())
+            .buttonStyle(PlainButtonStyle())
     }
 }
 

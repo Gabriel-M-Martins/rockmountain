@@ -39,12 +39,24 @@ struct AttractionView: View {
     }
     
     var body: some View {
-        NavigationStack {
             GeometryReader { reader in
                 ScrollView(showsIndicators: false) {
+//                    Divider()
+//                        .padding(.horizontal)
+//                        .navigationTitle("Atrações")
+                    
+                    HStack {
+                        Text("Atrações")
+                            .font(.largeTitle)
+                            .bold()
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 15)
+                    
                     Divider()
                         .padding(.horizontal)
-                        .navigationTitle("Atrações")
                     
                     SearchBar(searchText: $searchText, filter: $filter, size: CGSize(width: reader.size.width, height: reader.size.height * 0.4))
                     
@@ -79,8 +91,7 @@ struct AttractionView: View {
                     .padding(.bottom)
                 }
             }
-        }
-        .buttonStyle(PlainButtonStyle())
+            .buttonStyle(PlainButtonStyle())
     }
 }
 
