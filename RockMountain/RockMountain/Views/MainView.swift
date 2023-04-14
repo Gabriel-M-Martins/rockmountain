@@ -34,7 +34,7 @@ struct MainView: View {
                         .tabItem {
                             Label("Favoritos", systemImage: "staroflife")
                         }
-                    RestaurantGridView()
+                    MapView()
                         .tabItem {
                             Label("Mapa", systemImage: "map")
                             
@@ -48,14 +48,6 @@ struct MainView: View {
             .accentColor(.pink)
             
         }
-        
-        
-        //        .onAppear() {
-        //            //UITabBar.appearance().isTranslucent = false
-        //            //UITabBar.appearance().backgroundColor = .red
-        //            UITabBar.appearance().barStyle = .black
-        //        }
-        
     }
     
 }
