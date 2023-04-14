@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct SearchBar<T: Filter>: View {
-    @State private var searchText = ""
     @State private var showPopup = false
+
+    @Binding var searchText: String
     @Binding var filter: T
+
     var size: CGSize
     
     var body: some View {
@@ -59,6 +61,6 @@ struct SearchBar<T: Filter>: View {
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar<AttractionFilter>(filter: .constant(.standard), size: CGSize(width: 500, height: 400))
+        SearchBar<AttractionFilter>(searchText: .constant(""), filter: .constant(.standard), size: CGSize(width: 500, height: 400))
     }
 }

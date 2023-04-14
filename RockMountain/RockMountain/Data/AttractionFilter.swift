@@ -25,17 +25,36 @@ enum AttractionFilter: String, Filter {
         return AttractionFilter.stage
     }
     
-    func executeFilter(attractions: [Attraction]) -> [(title: String, attractionsIndices: [Int] )] {
+    func executeFilter(attractions: [Attraction], searched: String) -> [(title: String, attractionsIndices: [Int] )] {
+        var response = [(title: String, attractionsIndices: [Int] )]()
+        
         switch self {
         case .stage:
-            return self.filterByStage(attractions: attractions)
+            response = self.filterByStage(attractions: attractions)
             
         case .time:
-            return self.filterByTime(attractions: attractions)
+            response = self.filterByTime(attractions: attractions)
             
         case .alphabetic:
-            return self.filterByName(attractions: attractions)
+            response = self.filterByName(attractions: attractions)
         }
+        
+        let searchedResponse = response.map { (title: String, attractionsIndices: [Int]) in
+            let newIndices = attractionsIndices.filter { idx in
+                if searched.isEmpty{
+                    return true
+                }
+
+                return attractions[idx].name.lowercased().contains(searched.lowercased())
+            }
+
+            return (title, newIndices)
+        }
+        .filter { (_, attractionsIndices: [Int]) in
+            !attractionsIndices.isEmpty
+        }
+        
+        return searchedResponse
     }
     
     private func filterByName(attractions: [Attraction]) -> [(title: String, attractionsIndices: [Int] )] {

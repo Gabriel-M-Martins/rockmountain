@@ -35,7 +35,7 @@ struct AttractionView: View {
     ]
     
     private var attractionsFiltered: [(title: String, attractionsIndices: [Int] )] {
-        filter.executeFilter(attractions: self.attractions)
+        filter.executeFilter(attractions: self.attractions, searched: searchText)
     }
     
     var body: some View {
@@ -46,7 +46,7 @@ struct AttractionView: View {
                         .padding(.horizontal)
                         .navigationTitle("Atrações")
                     
-                    SearchBar(filter: $filter, size: CGSize(width: reader.size.width, height: reader.size.height * 0.4))
+                    SearchBar(searchText: $searchText, filter: $filter, size: CGSize(width: reader.size.width, height: reader.size.height * 0.4))
                     
                     let attractionsFiltered = self.attractionsFiltered
                     
@@ -76,6 +76,7 @@ struct AttractionView: View {
                         .shadow(color: Color.black.opacity(0.2), radius: 4)
                         .padding(.horizontal)
                     }
+                    .padding(.bottom)
                 }
             }
             .accentColor(Color(UIColor.label))
