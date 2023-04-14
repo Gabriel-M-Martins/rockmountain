@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RestaurantGridView: View {
     
-    let restaurants = [
+    @State var restaurants = [
         Restaurant(image: Image("VeganTI"), name: "Vegan TI", favorite: false, info: "aaa", items: [
             RestaurantMenuItem(name: "Almondegas de Lentilha (6 und)", description: "Esta porção serve até 2 pessoas", price: "22,00"),
             RestaurantMenuItem(name: "Bolinhos de Grão de Bico (6 und)", description: "Esta porção serve até 2 pessoas", price: "22,00"),
