@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Attraction: Detailable {
+struct Attraction: Detailable, Identifiable {
+    var id = UUID()
     var name: String
     var info: String
     var favorite: Bool

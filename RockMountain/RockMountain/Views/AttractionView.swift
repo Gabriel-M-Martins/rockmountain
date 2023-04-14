@@ -7,28 +7,27 @@
 
 import SwiftUI
 
+var attractionPlaceholder: Attraction {
+    let date = DateParser.createDate(time: (19, 30), day: .monday, year: 2023)!
+    let dateInterval = DateParser.createDateInterval(start: date, duration: (1, 0))
+    let show = Show(stage: .floresta, day: .monday, date: dateInterval)
+    
+    let attraction = Attraction(name: "Maria Bethânia", info: """
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed congue est, rhoncus cursus ante. Curabitur quis euismod risus. Duis ex nisi, feugiat quis iaculis eget, elementum non lorem. In vitae interdum metus, ut iaculis arcu. Nullam pellentesque gravida scelerisque. Fusce non ipsum id mi laoreet aliquet. Ut faucibus venenatis ipsum. Maecenas arcu nulla, sollicitudin ac placerat in, vehicula eu erat. Aliquam volutpat sollicitudin magna vel feugiat. Etiam ligula ligula, tristique et porta vel, sodales nec dolor. Cras sollicitudin odio vel aliquam egestas. Donec faucibus ipsum quis nulla mollis dignissim. Mauris tincidunt orci sed dignissim rhoncus.
+
+Mauris semper sodales eros, a tincidunt tortor viverra id. Quisque nisl eros, pretium vel diam at, rutrum vestibulum nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ut est lobortis, porta eros vel, pharetra neque. Nunc suscipit dapibus tellus, sed accumsan eros. Sed sed est ullamcorper, bibendum leo eget, tempor augue. Sed rhoncus turpis massa, at feugiat nisi mollis quis. Proin fringilla rhoncus diam, ut tempus arcu.
+""", favorite: false, image: Image("img"), show: [show], type: .artist)
+    
+    return attraction
+}
+
 struct AttractionView: View {
     @State var searchText = ""
     @State var filterActive = false
     @State var showPopup = false
-    @State var filters: [AttractionFilter] = []
+    @State var filters: [AttractionFilter] = [.standard]
     
-    var placeholder: Attraction {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        let start = formatter.date(from: "2023/10/08 21:30")!
-        let end = formatter.date(from: "2023/10/08 22:30")!
-        
-        let show = Show(stage: .floresta, startTime: start, endTime: end, day: .monday)
-        
-        let attraction = Attraction(name: "Maria Bethânia", info: """
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed congue est, rhoncus cursus ante. Curabitur quis euismod risus. Duis ex nisi, feugiat quis iaculis eget, elementum non lorem. In vitae interdum metus, ut iaculis arcu. Nullam pellentesque gravida scelerisque. Fusce non ipsum id mi laoreet aliquet. Ut faucibus venenatis ipsum. Maecenas arcu nulla, sollicitudin ac placerat in, vehicula eu erat. Aliquam volutpat sollicitudin magna vel feugiat. Etiam ligula ligula, tristique et porta vel, sodales nec dolor. Cras sollicitudin odio vel aliquam egestas. Donec faucibus ipsum quis nulla mollis dignissim. Mauris tincidunt orci sed dignissim rhoncus.
- 
- Mauris semper sodales eros, a tincidunt tortor viverra id. Quisque nisl eros, pretium vel diam at, rutrum vestibulum nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ut est lobortis, porta eros vel, pharetra neque. Nunc suscipit dapibus tellus, sed accumsan eros. Sed sed est ullamcorper, bibendum leo eget, tempor augue. Sed rhoncus turpis massa, at feugiat nisi mollis quis. Proin fringilla rhoncus diam, ut tempus arcu.
- """, favorite: false, image: Image("img"), show: [show], type: .artist)
-        
-        return attraction
-    }
+    @State var attractions: [Attraction] = [attractionPlaceholder, attractionPlaceholder, attractionPlaceholder, attractionPlaceholder, attractionPlaceholder, attractionPlaceholder]
     
     var body: some View {
         NavigationStack {
@@ -36,60 +35,32 @@ struct AttractionView: View {
                 ScrollView(showsIndicators: false) {
                     Divider()
                         .padding(.horizontal)
+                        .navigationTitle("Atrações")
                     
-                    HStack {
-                        TextField("Procurar", text: $searchText)
-                            .padding(.horizontal)
-                            .frame(height: 45)
-                            .background(.ultraThinMaterial)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .padding()
-                            .overlay {
-                                HStack {
-                                    Spacer()
-                                    
-                                    Button {
-                                        searchText = ""
-                                    } label: {
-                                        Label("clear", systemImage: "xmark")
-                                            .foregroundColor(.gray)
-                                            .opacity(searchText.isEmpty ? 0 : 1)
-                                            .padding(30)
-                                            .animation(.easeInOut, value: searchText.isEmpty)
-                                    }
-                                    .labelStyle(.iconOnly)
-                                }
-                            }
-                        
-                        Button {
-                            showPopup.toggle()
-                        } label: {
-                            Image(systemName: filterActive ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
-                                .font(.title)
-                                .animation(.linear(duration: 0.1), value: filterActive)
-                            
-                        }
-                        .sheet(isPresented: $showPopup, onDismiss: {filterActive = !filters.isEmpty}) {
-                            PopUpCard(height: reader.size.height * 0.4, width: reader.size.width, filters: $filters)
-                        }
-                        .padding(.leading, -10)
-                        .padding(.trailing)
-                    }
-                    .padding(.top, -13)
-                    
+                    SearchBar(filters: $filters, size: CGSize(width: reader.size.width, height: reader.size.height * 0.4))
                     
                     VStack {
-                        Divider()
-                            .navigationTitle("Atrações")
+                        HStack {
+                            PrettyTitle(title: "Palco Teste")
+                            
+                            Spacer()
+                        }
+                        .padding(.vertical)
+                        .padding(.horizontal, 30)
                         
-                        ForEach((1...20), id: \.self) { value in
+                        
+                        ForEach(0..<attractions.count, id: \.self) { idx in
+                            
                             NavigationLink {
-                                AttractionDetailsView(attraction: placeholder)
+                                AttractionDetailsView(attraction: $attractions[idx])
                             } label: {
-                                AttractionCard(attraction: placeholder, showIdx: 0)
+                                AttractionCard(attraction: $attractions[idx], showIdx: 0)
                             }
                             .buttonStyle(PlainButtonStyle())
                         }
+                        
+                        Spacer()
+                            .frame(height: 15)
                     }
                     .background(.ultraThinMaterial)
                     .cornerRadius(10)

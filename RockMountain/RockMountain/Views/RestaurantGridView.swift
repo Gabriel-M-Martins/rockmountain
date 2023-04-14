@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RestaurantGridView: View {
     
-    let restaurants = [
+    @State var restaurants = [
         Restaurant(image: Image("VeganTI"), name: "Vegan TI", favorite: false, info: "aaa"),
         Restaurant(image: Image("FazendaFuturo"), name: "Fazenda Futuro", favorite: false, info: "aaa"),
         Restaurant(image: Image("Coltivi"), name: "Coltivi", favorite: false, info: "aaa"),
@@ -37,11 +37,11 @@ struct RestaurantGridView: View {
                 
                 ScrollView {
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
-                        ForEach(restaurants, id: \.self) { restaurant in
+                        ForEach(0..<restaurants.count, id: \.self) { idx in
                             NavigationLink {
-                                RestaurantDetailView(restaurant: restaurant)
+                                RestaurantDetailView(restaurant: $restaurants[idx])
                             } label: {
-                                RestaurantCard(restaurant: restaurant)
+                                RestaurantCard(restaurant: restaurants[idx])
                             }
                         }
                     }

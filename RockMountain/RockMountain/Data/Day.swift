@@ -7,9 +7,11 @@
 
 import Foundation
 
-enum Day {
+// TODO: Make it so the day abreviation is reactive to localization
+
+enum Day: Int {
     case sunday, monday, tuesday, wednesday, thursday, friday, saturday
-    
+        
     func abrev() -> String {
         switch self {
         case .sunday:

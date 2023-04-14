@@ -16,43 +16,56 @@ struct PopUpCard<T: Filter>: View {
         VStack {
             Divider()
                 .padding(.horizontal, width * 0.45)
-            
+
             Text("Ordenar por")
                 .font(.title2)
             
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    Spacer()
-                    
                     ForEach(Array(T.allCases), id: \.self) { filter in
+                        let selected = filters.contains(filter)
+                        
                         HStack {
                             Spacer()
                             
                             Button {
-                                if let idx = filters.firstIndex(where: {$0.title == filter.title}) {
-                                    filters.remove(at: idx)
-                                } else {
-                                    filters.append(filter)
+                                if selected {
+                                    filters = []
+                                    return
                                 }
+                                
+                                if !filters.isEmpty {
+                                    filters = []
+                                    filters.append(filter)
+                                    return
+                                }
+                                
+                                filters.append(filter)
                             } label: {
                                 VStack {
-                                    Image(filter.imageName)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(height: 100)
-                                        .clipShape(Circle())
+                                    ZStack {
+                                        Circle()
+                                            .frame(height: 90)
+                                            .foregroundColor(selected ? .black : Color(UIColor.lightGray))
+                                            .animation(.linear(duration: 0.1), value: selected)
+                                        
+                                        Image(systemName: filter.imageName)
+                                            .font(.system(size: 30))
+                                            .bold()
+                                            .foregroundColor(selected ? .purple : Color(UIColor.gray))
+                                            .animation(.linear(duration: 0.1), value: selected)
+                                    }
                                     
-                                    Text(filter.title)
+                                    Text(filter.rawValue)
                                 }
                             }
-                            .opacity(filters.contains(where: {$0.title == filter.title}) ? 0.5 : 1)
+                            .opacity(selected ? 1 : 0.5)
                             .buttonStyle(PlainButtonStyle())
                             
                             Spacer()
                         }
                     }
-                    Spacer()
                 }
                 .frame(width: width)
                 .padding(.trailing)
@@ -67,6 +80,6 @@ struct PopUpCard<T: Filter>: View {
 
 struct PopUpCard_Previews: PreviewProvider {
     static var previews: some View {
-        PopUpCard<AttractionFilter>(height: 150, width: 400, filters: .constant([]))
+        PopUpCard<AttractionFilter>(height: 150, width: 400, filters: .constant([.standard]))
     }
 }

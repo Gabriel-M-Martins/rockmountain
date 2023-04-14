@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct AttractionCard: View {
-    @State var attraction: Attraction
+    @Binding var attraction: Attraction
     var showIdx: Int
+    private var date: String {
+        let formattedDates = DateParser.formatDateInterval(interval: attraction.show[showIdx].date)
+        return "\(formattedDates.start) - \(formattedDates.end)"
+    }
     
     var body: some View {
         HStack(alignment: .top) {
@@ -25,7 +29,7 @@ struct AttractionCard: View {
                             .font(.title2)
                             .bold()
                         
-                        Text("\(attraction.show[showIdx].day.abrev()) | \(attraction.show[showIdx].formattedStartTime()) - \(attraction.show[showIdx].formattedEndTime())")
+                        Text("\(attraction.show[showIdx].day.abrev()) | \(date)")
                         Text(attraction.show[showIdx].stage.text())
                     }
                     
@@ -46,15 +50,13 @@ struct AttractionCard: View {
 
 struct AttractionCard_Previews: PreviewProvider {
     static var previews: some View {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        let start = formatter.date(from: "2023/10/08 21:30")!
-        let end = formatter.date(from: "2023/10/08 22:30")!
+        let date = DateParser.createDate(time: (19, 30), day: .monday, year: 2023)!
+        let dateInterval = DateParser.createDateInterval(start: date, duration: (1, 0))
         
-        let show = Show(stage: .floresta, startTime: start, endTime: end, day: .monday)
+        let show = Show(stage: .floresta, day: .monday, date: dateInterval)
         
         let attraction = Attraction(name: "Maria Bethânia", info: "", favorite: false, image: Image("img"), show: [show], type: .artist)
         
-        return AttractionCard(attraction: attraction, showIdx: 0)
+        return AttractionCard(attraction: .constant(attraction), showIdx: 0)
     }
 }

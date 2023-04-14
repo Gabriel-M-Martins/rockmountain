@@ -7,30 +7,21 @@
 
 import Foundation
 
-enum AttractionFilter: Filter {
-    case stage, time, alphabetic
-    
-    var title: String {
-        switch self {
-        case .stage:
-            return "Palco"
-        case .time:
-            return "Horário"
-        case .alphabetic:
-            return "A - Z"
-            
-        }
-    }
+enum AttractionFilter: String, Filter {
+    case stage = "Palco", time = "Horário", alphabetic = "A - Z"
     
     var imageName: String {
         switch self {
         case .stage:
-            return "img"
+            return "paperplane.fill"
         case .time:
-            return "img"
+            return "calendar.badge.clock"
         case .alphabetic:
-            return "img"
+            return "list.bullet"
         }
     }
+    
+    static var standard: AttractionFilter {
+        return AttractionFilter.time
+    }
 }
-

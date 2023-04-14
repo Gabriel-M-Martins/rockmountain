@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Filter: CaseIterable, Hashable {
-    var title: String { get }
+protocol Filter: CaseIterable, Hashable, RawRepresentable where RawValue == String {
     var imageName: String { get }
+    static var standard: Self { get }
 }
