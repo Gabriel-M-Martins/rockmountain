@@ -25,7 +25,7 @@ enum AttractionFilter: String, Filter {
         return AttractionFilter.stage
     }
     
-    func executeFilter(attractions: [Attraction], searched: String) -> [(title: String, attractionsIndices: [Int] )] {
+    func executeFilter(attractions: [Attraction], searched: String, onlyFavorites: Bool = false) -> [(title: String, attractionsIndices: [Int] )] {
         var response = [(title: String, attractionsIndices: [Int] )]()
         
         switch self {
@@ -39,22 +39,34 @@ enum AttractionFilter: String, Filter {
             response = self.filterByName(attractions: attractions)
         }
         
-        let searchedResponse = response.map { (title: String, attractionsIndices: [Int]) in
-            let newIndices = attractionsIndices.filter { idx in
-                if searched.isEmpty{
-                    return true
+        // filters for the searched text if any
+        if !searched.isEmpty {
+            response = response.map { (title: String, attractionsIndices: [Int]) in
+                let newIndices = attractionsIndices.filter { idx in
+                    return attractions[idx].name.lowercased().contains(searched.lowercased())
                 }
 
-                return attractions[idx].name.lowercased().contains(searched.lowercased())
+                return (title, newIndices)
             }
-
-            return (title, newIndices)
         }
-        .filter { (_, attractionsIndices: [Int]) in
+ 
+        if onlyFavorites {
+            // filters for only the favorites
+            response = response.map({ (title: String, attractionsIndices: [Int]) in
+                let newIndices = attractionsIndices.filter { idx in
+                    attractions[idx].favorite
+                }
+                
+                return (title, newIndices)
+            })
+        }
+        
+        // clean up empty categories
+        response = response.filter { (_, attractionsIndices: [Int]) in
             !attractionsIndices.isEmpty
         }
         
-        return searchedResponse
+        return response
     }
     
     private func filterByName(attractions: [Attraction]) -> [(title: String, attractionsIndices: [Int] )] {
