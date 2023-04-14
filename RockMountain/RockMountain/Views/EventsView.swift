@@ -19,7 +19,7 @@ struct EventsView: View {
                     .padding(.leading)
                 
                 ZStack(alignment: .leading){
-                    Image("music1")
+                    Image("music")
                     
                     Text("Playlists")
                         .font(.title2)
@@ -29,7 +29,7 @@ struct EventsView: View {
                 }
                 
                 ZStack(alignment: .leading) {
-                    Image("loja1")
+                    Image("loja")
                     
                     Text("Lojinha")
                         .font(.title2)
@@ -39,7 +39,7 @@ struct EventsView: View {
                 }
                 
                 ZStack(alignment: .leading) {
-                    Image("mountain1")
+                    Image("mountain")
                         .padding([.top, .leading])
                     
                     Text("Compromisso com a natureza")

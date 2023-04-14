@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct RestaurantMenuItem {
+struct RestaurantMenuItem: Identifiable {
     
-    let image : String
+    var id = UUID()
+
     let name : String
     let description : String
     let price : String
