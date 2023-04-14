@@ -10,7 +10,7 @@ import SwiftUI
 struct PopUpCard<T: Filter>: View {
     var height: Double
     var width: Double
-    @Binding var filters: [T]
+    @Binding var selectedFilter: T
     
     var body: some View {
         VStack {
@@ -24,24 +24,19 @@ struct PopUpCard<T: Filter>: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(Array(T.allCases), id: \.self) { filter in
-                        let selected = filters.contains(filter)
+                        let selected = selectedFilter == filter
                         
                         HStack {
                             Spacer()
                             
                             Button {
+                                
                                 if selected {
-                                    filters = []
-                                    return
+                                    selectedFilter = T.standard
+                                } else {
+                                    selectedFilter = filter
                                 }
                                 
-                                if !filters.isEmpty {
-                                    filters = []
-                                    filters.append(filter)
-                                    return
-                                }
-                                
-                                filters.append(filter)
                             } label: {
                                 VStack {
                                     ZStack {
@@ -80,6 +75,6 @@ struct PopUpCard<T: Filter>: View {
 
 struct PopUpCard_Previews: PreviewProvider {
     static var previews: some View {
-        PopUpCard<AttractionFilter>(height: 150, width: 400, filters: .constant([.standard]))
+        PopUpCard<AttractionFilter>(height: 150, width: 400, selectedFilter: .constant(.standard))
     }
 }

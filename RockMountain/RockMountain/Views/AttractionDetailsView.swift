@@ -25,6 +25,6 @@ struct AttractionDetailsView: View {
 
 struct AttractionDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        AttractionDetailsView(attraction: .constant(attractionPlaceholder))
+        AttractionDetailsView(attraction: .constant(attractionPlaceholderGenerator(hour: 19, stage: .floresta, name: "maria") ))
     }
 }

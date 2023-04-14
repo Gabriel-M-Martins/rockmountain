@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchBar<T: Filter>: View {
     @State private var searchText = ""
     @State private var showPopup = false
-    @Binding var filters: [T]
+    @Binding var filter: T
     var size: CGSize
     
     var body: some View {
@@ -48,15 +48,8 @@ struct SearchBar<T: Filter>: View {
                 
             }
             .buttonStyle(PlainButtonStyle())
-            .sheet(isPresented: $showPopup,
-                   onDismiss: {
-                
-                if filters.isEmpty {
-                    filters.append(T.standard)
-                }
-                
-            }) {
-                PopUpCard(height: size.height, width: size.width, filters: $filters)
+            .sheet(isPresented: $showPopup) {
+                PopUpCard(height: size.height, width: size.width, selectedFilter: $filter)
             }
             .padding(.leading, -10)
             .padding(.trailing)
@@ -66,6 +59,6 @@ struct SearchBar<T: Filter>: View {
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar(filters: .constant([AttractionFilter]()), size: CGSize(width: 500, height: 400))
+        SearchBar<AttractionFilter>(filter: .constant(.standard), size: CGSize(width: 500, height: 400))
     }
 }

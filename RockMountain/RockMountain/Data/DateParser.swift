@@ -32,15 +32,23 @@ struct DateParser {
     }
     
     static func formatDateInterval(interval: DateInterval) -> (start: String, end: String) {
-        let startHour = Calendar.current.component(.hour, from: interval.start)
-        let startMinute = Calendar.current.component(.minute, from: interval.start)
+        let startHour = self.getHour(date: interval.start)
+        let startMinute = self.getMinute(date: interval.start)
         
-        let endHour = Calendar.current.component(.hour, from: interval.end)
-        let endMinute = Calendar.current.component(.minute, from: interval.end)
+        let endHour = self.getHour(date: interval.end)
+        let endMinute = self.getMinute(date: interval.end)
         
         let formattedStart = "\(startHour):\(startMinute)"
         let formattedEnd = "\(endHour):\(endMinute)"
         
         return (formattedStart, formattedEnd)
+    }
+    
+    static func getHour(date: Date) -> Int {
+        return Calendar.current.component(.hour, from: date)
+    }
+    
+    static func getMinute(date: Date) -> Int {
+        return Calendar.current.component(.minute, from: date)
     }
 }

@@ -14,5 +14,7 @@ struct Attraction: Detailable, Identifiable {
     var info: String
     var favorite: Bool
     var image: Image
-    var show: [Show]
+    var show: Show
+    
+    
 }

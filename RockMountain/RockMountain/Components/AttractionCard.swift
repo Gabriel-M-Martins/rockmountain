@@ -9,9 +9,8 @@ import SwiftUI
 
 struct AttractionCard: View {
     @Binding var attraction: Attraction
-    var showIdx: Int
     private var date: String {
-        let formattedDates = DateParser.formatDateInterval(interval: attraction.show[showIdx].date)
+        let formattedDates = DateParser.formatDateInterval(interval: attraction.show.date)
         return "\(formattedDates.start) - \(formattedDates.end)"
     }
     
@@ -29,8 +28,8 @@ struct AttractionCard: View {
                             .font(.title2)
                             .bold()
                         
-                        Text("\(attraction.show[showIdx].day.abrev()) | \(date)")
-                        Text(attraction.show[showIdx].stage.text())
+                        Text("\(attraction.show.day.abrev()) | \(date)")
+                        Text(attraction.show.stage.rawValue)
                     }
                     
                     Spacer()
@@ -50,6 +49,6 @@ struct AttractionCard: View {
 
 struct AttractionCard_Previews: PreviewProvider {
     static var previews: some View {
-        return AttractionCard(attraction: .constant(attractionPlaceholder), showIdx: 0)
+        return AttractionCard(attraction: .constant(attractionPlaceholderGenerator(hour: 19, stage: .floresta, name: "maria") ))
     }
 }

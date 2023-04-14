@@ -47,6 +47,6 @@ struct ImageHeader<T: Detailable>: View {
 
 struct ImageHeader_Previews: PreviewProvider {
     static var previews: some View {
-        ImageHeader(details: .constant(attractionPlaceholder))
+        ImageHeader(details: .constant(attractionPlaceholderGenerator(hour: 19, stage: .floresta, name: "maria") ))
     }
 }
