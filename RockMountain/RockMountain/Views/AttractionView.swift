@@ -53,7 +53,7 @@ struct AttractionView: View {
                     ForEach(0..<attractionsFiltered.count, id: \.self) { categoryIdx in
                         VStack {
                             HStack {
-                                PrettyTitle(title: attractionsFiltered[categoryIdx].title)
+                                PrettyTitle(title: attractionsFiltered[categoryIdx].title.uppercased())
                                 
                                 Spacer()
                             }

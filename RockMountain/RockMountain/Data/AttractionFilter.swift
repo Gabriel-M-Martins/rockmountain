@@ -22,7 +22,7 @@ enum AttractionFilter: String, Filter {
     }
     
     static var standard: AttractionFilter {
-        return AttractionFilter.time
+        return AttractionFilter.stage
     }
     
     func executeFilter(attractions: [Attraction]) -> [(title: String, attractionsIndices: [Int] )] {
