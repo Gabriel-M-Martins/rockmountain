@@ -38,6 +38,17 @@ struct AttractionView: View {
         filter.executeFilter(attractions: self.attractions, searched: searchText)
     }
     
+    func colors(stage: Stage) -> (background: Color, text: Color) {
+        switch stage {
+        case .floresta:
+            return (Color("ColorBlue"), Color("ColorGreen"))
+        case .estrela:
+            return (Color("ColorPink"), Color("ColorYellow"))
+        case .mangolab:
+            return (Color("ColorLight"), Color("ColorPink"))
+        }
+    }
+    
     var body: some View {
             GeometryReader { reader in
                 ScrollView(showsIndicators: false) {
@@ -63,9 +74,11 @@ struct AttractionView: View {
                     let attractionsFiltered = self.attractionsFiltered
                     
                     ForEach(0..<attractionsFiltered.count, id: \.self) { categoryIdx in
+                        let colors = self.colors(stage: Stage.init(rawValue: attractionsFiltered[categoryIdx].title)!)
+                        
                         VStack {
                             HStack {
-                                PrettyTitle(title: attractionsFiltered[categoryIdx].title.uppercased())
+                                PrettyTitle(title: attractionsFiltered[categoryIdx].title.uppercased(), backgroundColor: colors.background, textColor: colors.text)
                                 
                                 Spacer()
                             }

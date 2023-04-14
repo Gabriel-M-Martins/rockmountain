@@ -9,11 +9,13 @@ import SwiftUI
 
 struct PrettyTitle: View {
     var title: String
+    var backgroundColor: Color = .blue
+    var textColor: Color = .green
     
     var body: some View {
         Text(title)
             .font(Font.custom("SairaCondensed-ExtraBold", size: 32, relativeTo: .title))
-            .foregroundColor(.green)
+            .foregroundColor(textColor)
             .shadow(color: .black, radius: 2)
             .background {
                 RoundedRectangle(cornerRadius: 10)
@@ -21,7 +23,7 @@ struct PrettyTitle: View {
                     .padding(.horizontal, -10)
 
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(.blue)
+                    .fill(backgroundColor)
                     .padding(.horizontal, -10)
             }
     }
