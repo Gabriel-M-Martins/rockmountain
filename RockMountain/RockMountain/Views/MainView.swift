@@ -41,11 +41,11 @@ struct MainView: View {
                         }
                 }
                 .toolbarBackground(.visible, for: .tabBar)
-                .toolbarBackground(Color.black, for: .tabBar)
+                .toolbarBackground(Color("ColorDark"), for: .tabBar)
                 
                 
             }
-            .accentColor(.pink)
+            .accentColor(Color("ColorPink"))
             
         }
     }
