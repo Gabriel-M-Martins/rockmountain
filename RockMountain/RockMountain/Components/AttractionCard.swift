@@ -17,7 +17,10 @@ struct AttractionCard: View {
     var body: some View {
         HStack(alignment: .top) {
             attraction.image
-                .cornerRadius(50)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 70, height: 70)
+                .cornerRadius(35)
                 .padding(.trailing, 5)
                 .padding(.top, 5)
             

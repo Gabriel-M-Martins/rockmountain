@@ -10,6 +10,22 @@ import Foundation
 enum AttractionFilter: String, Filter {
     case stage = "Palco", time = "Horário", alphabetic = "A - Z"
     
+    static func getStage(nome: String) -> Self {
+        if nome == "Palco" {
+            return self.stage
+        }
+        
+        if nome == "Horário" {
+            return self.time
+        }
+        
+        if nome == "A - Z" {
+            return self.alphabetic
+        }
+        
+        return .standard
+    }
+    
     var imageName: String {
         switch self {
         case .stage:

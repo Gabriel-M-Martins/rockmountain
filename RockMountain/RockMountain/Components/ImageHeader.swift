@@ -17,7 +17,7 @@ struct ImageHeader<T: Detailable>: View {
             details.image
                 .resizable()
                 .scaledToFill()
-                .frame(height: CGFloat(height))
+                .frame(width: .infinity)
                 .clipped()
             
             Rectangle()

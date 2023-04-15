@@ -11,7 +11,7 @@ import SwiftUI
 struct RockMountainApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            OnBoardingView()
         }
     }
 }

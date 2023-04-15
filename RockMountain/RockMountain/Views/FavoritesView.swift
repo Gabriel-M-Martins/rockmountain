@@ -11,12 +11,14 @@ struct FavoritesView: View {
     @State var filter: AttractionFilter = .standard
     @State var searchText: String = ""
     
-    @State var favoriteAttractions: [Attraction] = [
-        attractionPlaceholderGenerator(hour: 19, stage: .mangolab, name: "maria"),
-        attractionPlaceholderGenerator(hour: 9, stage: .floresta, name: "maria"),
-        attractionPlaceholderGenerator(hour: 19, stage: .estrela, name: "maria"),
-        attractionPlaceholderGenerator(hour: 21, stage: .floresta, name: "jose")
-    ]
+//    @State var favoriteAttractions: [Attraction] = [
+//        attractionPlaceholderGenerator(hour: 19, stage: .mangolab, name: "maria"),
+//        attractionPlaceholderGenerator(hour: 9, stage: .floresta, name: "maria"),
+//        attractionPlaceholderGenerator(hour: 19, stage: .estrela, name: "maria"),
+//        attractionPlaceholderGenerator(hour: 21, stage: .floresta, name: "jose")
+//    ]
+    
+    @Binding var favoriteAttractions: [Attraction]
     
     private var favoriteAttractionsFiltered: [(title: String, attractionsIndices: [Int] )] {
         filter.executeFilter(attractions: favoriteAttractions, searched: searchText, onlyFavorites: true)
@@ -58,7 +60,23 @@ struct FavoritesView: View {
                     let attractionsFiltered = self.favoriteAttractionsFiltered
                     
                     ForEach(0..<attractionsFiltered.count, id: \.self) { categoryIdx in
-                        let colors = self.colors(stage: Stage.init(rawValue: attractionsFiltered[categoryIdx].title)!)
+                        var stage: Stage {
+                            if attractionsFiltered[categoryIdx].title == "Palco Floresta" {
+                                return Stage.floresta
+                            }
+                            
+                            if attractionsFiltered[categoryIdx].title == "Palco Estrela" {
+                                return Stage.estrela
+                            }
+                            
+                            if attractionsFiltered[categoryIdx].title == "Palco Mangolab" {
+                                return Stage.mangolab
+                            }
+                            
+                            return Stage.estrela
+                        }
+                        
+                        let colors = self.colors(stage: stage)
                         
                         VStack {
                             HStack {
@@ -101,8 +119,13 @@ struct FavoritesView_Previews: PreviewProvider {
 //            attractionPlaceholderGenerator(hour: 19, stage: .estrela, name: "maria"),
 //            attractionPlaceholderGenerator(hour: 21, stage: .floresta, name: "jose")
 //        ]
-        
-        FavoritesView()
+        let att =  [
+            attractionPlaceholderGenerator(hour: 19, stage: .mangolab, name: "Maria"),
+            attractionPlaceholderGenerator(hour: 9, stage: .floresta, name: "Julia"),
+            attractionPlaceholderGenerator(hour: 19, stage: .estrela, name: "Jorge"),
+            attractionPlaceholderGenerator(hour: 21, stage: .floresta, name: "Marco")
+        ]
+        FavoritesView(favoriteAttractions: .constant(att))
 //        FavoritesView(favoriteAttractions: .constant(attractions))
     }
 }

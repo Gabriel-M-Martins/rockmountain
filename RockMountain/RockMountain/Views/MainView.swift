@@ -9,8 +9,16 @@ import SwiftUI
 import UIKit
 
 struct MainView: View {
+    @State var attractions: [Attraction] = [
+        attractionPlaceholderGenerator(hour: 19, stage: .mangolab, name: "Maria"),
+        attractionPlaceholderGenerator(hour: 9, stage: .floresta, name: "Julia"),
+        attractionPlaceholderGenerator(hour: 19, stage: .estrela, name: "Jorge"),
+        attractionPlaceholderGenerator(hour: 21, stage: .floresta, name: "Marco")
+    ]
+    
     var body: some View {
         NavigationStack {
+            
             TabView {
                 
                 Group {
@@ -20,7 +28,7 @@ struct MainView: View {
                         }
                     
                     
-                    AttractionView()
+                    AttractionView(attractions: $attractions)
                         .tabItem {
                             Label("Atrações", systemImage: "guitars")
                                 
@@ -31,7 +39,7 @@ struct MainView: View {
                             Label("Bar", systemImage: "takeoutbag.and.cup.and.straw")
                         }
                     
-                    FavoritesView()
+                    FavoritesView(favoriteAttractions: $attractions)
                         .tabItem {
                             Label("Favoritos", systemImage: "staroflife")
                         }
@@ -49,6 +57,7 @@ struct MainView: View {
             .accentColor(Color("ColorPink"))
             
         }
+        .navigationBarBackButtonHidden(true)
     }
     
 }
