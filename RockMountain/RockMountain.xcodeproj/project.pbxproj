@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73A202D029EDBB9F00BE77F3 /* ShowLogoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A202CF29EDBB9F00BE77F3 /* ShowLogoScreen.swift */; };
 		73FA3D1929E72AFD0094906D /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1829E72AFD0094906D /* OnBoardingView.swift */; };
 		73FA3D1B29E72B350094906D /* Welcome1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1A29E72B350094906D /* Welcome1View.swift */; };
 		73FA3D1D29E72B670094906D /* Welcome2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1C29E72B670094906D /* Welcome2View.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73A202CF29EDBB9F00BE77F3 /* ShowLogoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLogoScreen.swift; sourceTree = "<group>"; };
 		73FA3D1829E72AFD0094906D /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		73FA3D1A29E72B350094906D /* Welcome1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome1View.swift; sourceTree = "<group>"; };
 		73FA3D1C29E72B670094906D /* Welcome2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome2View.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				A7CDE43F29E8F31000125E7F /* Info.plist */,
 				B1D0835729E5D9090089B987 /* RockMountainApp.swift */,
+				73A202CF29EDBB9F00BE77F3 /* ShowLogoScreen.swift */,
 				A7CDE43A29E8ECF100125E7F /* Font */,
 				B1333F7129E5C92200E95859 /* Views */,
 				A714458829E5C56500164CF2 /* Components */,
@@ -294,6 +297,7 @@
 				B1D5953729E72DF600CAA5D3 /* BigMapView.swift in Sources */,
 				73FA3D1929E72AFD0094906D /* OnBoardingView.swift in Sources */,
 				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
+				73A202D029EDBB9F00BE77F3 /* ShowLogoScreen.swift in Sources */,
 				B1D61EF229E5E77E007F4099 /* Restaurant.swift in Sources */,
 				73FA3D1B29E72B350094906D /* Welcome1View.swift in Sources */,
 				B1D61EF429E5E7BD007F4099 /* RestaurantMenuItem.swift in Sources */,
