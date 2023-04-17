@@ -7,20 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A790A20629E4A05100B50611 /* RockMountainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A790A20529E4A05100B50611 /* RockMountainApp.swift */; };
-		A790A20829E4A05100B50611 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A790A20729E4A05100B50611 /* ContentView.swift */; };
+		73A202D029EDBB9F00BE77F3 /* ShowLogoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A202CF29EDBB9F00BE77F3 /* ShowLogoScreen.swift */; };
+		73FA3D1929E72AFD0094906D /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1829E72AFD0094906D /* OnBoardingView.swift */; };
+		73FA3D1B29E72B350094906D /* Welcome1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1A29E72B350094906D /* Welcome1View.swift */; };
+		73FA3D1D29E72B670094906D /* Welcome2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1C29E72B670094906D /* Welcome2View.swift */; };
+		73FA3D1F29E72B910094906D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FA3D1E29E72B910094906D /* EventsView.swift */; };
+		A7451EBB29E8A1D30031CFB1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7451EBA29E8A1D30031CFB1 /* MainView.swift */; };
+		A7451EBD29E8BA8C0031CFB1 /* DateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7451EBC29E8BA8C0031CFB1 /* DateParser.swift */; };
 		A790A20A29E4A05100B50611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790A20929E4A05100B50611 /* Assets.xcassets */; };
 		A790A20D29E4A05100B50611 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790A20C29E4A05100B50611 /* Preview Assets.xcassets */; };
-		A790A21429E4A07300B50611 /* AttractionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A790A21329E4A07200B50611 /* AttractionCard.swift */; };
+		A79EA04029E5E4E200C68336 /* Detailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EA03F29E5E4E200C68336 /* Detailable.swift */; };
+		A79EA04229E5EA6F00C68336 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EA04129E5EA6F00C68336 /* FavoriteButton.swift */; };
+		A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AA29E4EC4D00AAB0CF /* Day.swift */; };
+		A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AC29E4EC7100AAB0CF /* Stage.swift */; };
+		A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */; };
+		A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */; };
+		A7C7AA1129E7521500E5F998 /* PopUpCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7AA1029E7521500E5F998 /* PopUpCard.swift */; };
+		A7C7AA1329E7870800E5F998 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7AA1229E7870800E5F998 /* Filter.swift */; };
+		A7C7AA1529E7872F00E5F998 /* AttractionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7AA1429E7872F00E5F998 /* AttractionFilter.swift */; };
+		A7CDE43229E8DCA800125E7F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CDE43129E8DCA800125E7F /* SearchBar.swift */; };
+		A7CDE43C29E8ED2600125E7F /* SairaCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7CDE43B29E8ED2600125E7F /* SairaCondensed-ExtraBold.ttf */; };
+		A7CDE44129E8FA8000125E7F /* PrettyTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CDE44029E8FA8000125E7F /* PrettyTitle.swift */; };
+		A7EFEF6A29E988BF00616963 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EFEF6929E988BF00616963 /* FavoritesView.swift */; };
+		A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3429E59AB100158F34 /* Attraction.swift */; };
+		A7F40E3929E59AF100158F34 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F40E3829E59AF100158F34 /* Show.swift */; };
+		B1333F6E29E5C75700E95859 /* RestaurantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F6D29E5C75700E95859 /* RestaurantCard.swift */; };
+		B1333F7029E5C8A000E95859 /* RestaurantGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F6F29E5C89F00E95859 /* RestaurantGridView.swift */; };
+		B1333F7429E5CEAC00E95859 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1333F7329E5CEAC00E95859 /* RestaurantDetailView.swift */; };
+		B1D0835A29E5D9090089B987 /* RockMountainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0835729E5D9090089B987 /* RockMountainApp.swift */; };
+		B1D0835B29E5D9090089B987 /* ImageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0835829E5D9090089B987 /* ImageHeader.swift */; };
+		B1D0835C29E5D9090089B987 /* AttractionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0835929E5D9090089B987 /* AttractionCard.swift */; };
+		B1D5953529E72B0700CAA5D3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5953429E72B0700CAA5D3 /* MapView.swift */; };
+		B1D5953729E72DF600CAA5D3 /* BigMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5953629E72DF600CAA5D3 /* BigMapView.swift */; };
+		B1D5953929E73CD800CAA5D3 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5953829E73CD800CAA5D3 /* ZoomableScrollView.swift */; };
+		B1D61EF029E5E021007F4099 /* MenuItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D61EEF29E5E021007F4099 /* MenuItemCard.swift */; };
+		B1D61EF229E5E77E007F4099 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D61EF129E5E77E007F4099 /* Restaurant.swift */; };
+		B1D61EF429E5E7BD007F4099 /* RestaurantMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D61EF329E5E7BD007F4099 /* RestaurantMenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73A202CF29EDBB9F00BE77F3 /* ShowLogoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLogoScreen.swift; sourceTree = "<group>"; };
+		73FA3D1829E72AFD0094906D /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		73FA3D1A29E72B350094906D /* Welcome1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome1View.swift; sourceTree = "<group>"; };
+		73FA3D1C29E72B670094906D /* Welcome2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome2View.swift; sourceTree = "<group>"; };
+		73FA3D1E29E72B910094906D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		A7451EBA29E8A1D30031CFB1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A7451EBC29E8BA8C0031CFB1 /* DateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParser.swift; sourceTree = "<group>"; };
 		A790A20229E4A05100B50611 /* RockMountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockMountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A790A20529E4A05100B50611 /* RockMountainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockMountainApp.swift; sourceTree = "<group>"; };
-		A790A20729E4A05100B50611 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A790A20929E4A05100B50611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A790A20C29E4A05100B50611 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A790A21329E4A07200B50611 /* AttractionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionCard.swift; sourceTree = "<group>"; };
+		A79EA03F29E5E4E200C68336 /* Detailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detailable.swift; sourceTree = "<group>"; };
+		A79EA04129E5EA6F00C68336 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		A7AE13AA29E4EC4D00AAB0CF /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		A7AE13AC29E4EC7100AAB0CF /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionView.swift; sourceTree = "<group>"; };
+		A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailsView.swift; sourceTree = "<group>"; };
+		A7C7AA1029E7521500E5F998 /* PopUpCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpCard.swift; sourceTree = "<group>"; };
+		A7C7AA1229E7870800E5F998 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		A7C7AA1429E7872F00E5F998 /* AttractionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionFilter.swift; sourceTree = "<group>"; };
+		A7CDE43129E8DCA800125E7F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		A7CDE43B29E8ED2600125E7F /* SairaCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SairaCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A7CDE43F29E8F31000125E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7CDE44029E8FA8000125E7F /* PrettyTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyTitle.swift; sourceTree = "<group>"; };
+		A7EFEF6929E988BF00616963 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		A7F40E3429E59AB100158F34 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
+		A7F40E3829E59AF100158F34 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		B1333F6D29E5C75700E95859 /* RestaurantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCard.swift; sourceTree = "<group>"; };
+		B1333F6F29E5C89F00E95859 /* RestaurantGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantGridView.swift; sourceTree = "<group>"; };
+		B1333F7329E5CEAC00E95859 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
+		B1D0835729E5D9090089B987 /* RockMountainApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockMountainApp.swift; sourceTree = "<group>"; };
+		B1D0835829E5D9090089B987 /* ImageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHeader.swift; sourceTree = "<group>"; };
+		B1D0835929E5D9090089B987 /* AttractionCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionCard.swift; sourceTree = "<group>"; };
+		B1D5953429E72B0700CAA5D3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B1D5953629E72DF600CAA5D3 /* BigMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigMapView.swift; sourceTree = "<group>"; };
+		B1D5953829E73CD800CAA5D3 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
+		B1D61EEF29E5E021007F4099 /* MenuItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCard.swift; sourceTree = "<group>"; };
+		B1D61EF129E5E77E007F4099 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		B1D61EF329E5E7BD007F4099 /* RestaurantMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +97,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A714458829E5C56500164CF2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B1D0835929E5D9090089B987 /* AttractionCard.swift */,
+				B1333F6D29E5C75700E95859 /* RestaurantCard.swift */,
+				B1D0835829E5D9090089B987 /* ImageHeader.swift */,
+				B1D61EEF29E5E021007F4099 /* MenuItemCard.swift */,
+				A79EA04129E5EA6F00C68336 /* FavoriteButton.swift */,
+				B1D5953829E73CD800CAA5D3 /* ZoomableScrollView.swift */,
+				A7C7AA1029E7521500E5F998 /* PopUpCard.swift */,
+				A7CDE43129E8DCA800125E7F /* SearchBar.swift */,
+				A7CDE44029E8FA8000125E7F /* PrettyTitle.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A790A1F929E4A05100B50611 = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +132,13 @@
 		A790A20429E4A05100B50611 /* RockMountain */ = {
 			isa = PBXGroup;
 			children = (
-				A790A20529E4A05100B50611 /* RockMountainApp.swift */,
-				A790A20729E4A05100B50611 /* ContentView.swift */,
-				A790A21329E4A07200B50611 /* AttractionCard.swift */,
+				A7CDE43F29E8F31000125E7F /* Info.plist */,
+				B1D0835729E5D9090089B987 /* RockMountainApp.swift */,
+				73A202CF29EDBB9F00BE77F3 /* ShowLogoScreen.swift */,
+				A7CDE43A29E8ECF100125E7F /* Font */,
+				B1333F7129E5C92200E95859 /* Views */,
+				A714458829E5C56500164CF2 /* Components */,
+				A7F40E3329E59A8C00158F34 /* Data */,
 				A790A20929E4A05100B50611 /* Assets.xcassets */,
 				A790A20B29E4A05100B50611 /* Preview Content */,
 			);
@@ -68,6 +151,58 @@
 				A790A20C29E4A05100B50611 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A79EA03E29E5E4B100C68336 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A79EA03F29E5E4E200C68336 /* Detailable.swift */,
+				A7C7AA1229E7870800E5F998 /* Filter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A7CDE43A29E8ECF100125E7F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A7CDE43B29E8ED2600125E7F /* SairaCondensed-ExtraBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		A7F40E3329E59A8C00158F34 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A79EA03E29E5E4B100C68336 /* Protocols */,
+				A7AE13AC29E4EC7100AAB0CF /* Stage.swift */,
+				A7AE13AA29E4EC4D00AAB0CF /* Day.swift */,
+				A7F40E3429E59AB100158F34 /* Attraction.swift */,
+				A7F40E3829E59AF100158F34 /* Show.swift */,
+				B1D61EF129E5E77E007F4099 /* Restaurant.swift */,
+				B1D61EF329E5E7BD007F4099 /* RestaurantMenuItem.swift */,
+				A7C7AA1429E7872F00E5F998 /* AttractionFilter.swift */,
+				A7451EBC29E8BA8C0031CFB1 /* DateParser.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B1333F7129E5C92200E95859 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7AE13AE29E4ED3100AAB0CF /* AttractionView.swift */,
+				B1333F6F29E5C89F00E95859 /* RestaurantGridView.swift */,
+				B1333F7329E5CEAC00E95859 /* RestaurantDetailView.swift */,
+				A7B3488829E6157C007CC4D8 /* AttractionDetailsView.swift */,
+				B1D5953429E72B0700CAA5D3 /* MapView.swift */,
+				B1D5953629E72DF600CAA5D3 /* BigMapView.swift */,
+				73FA3D1829E72AFD0094906D /* OnBoardingView.swift */,
+				73FA3D1A29E72B350094906D /* Welcome1View.swift */,
+				73FA3D1C29E72B670094906D /* Welcome2View.swift */,
+				73FA3D1E29E72B910094906D /* EventsView.swift */,
+				A7EFEF6929E988BF00616963 /* FavoritesView.swift */,
+				A7451EBA29E8A1D30031CFB1 /* MainView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CDE43C29E8ED2600125E7F /* SairaCondensed-ExtraBold.ttf in Resources */,
 				A790A20D29E4A05100B50611 /* Preview Assets.xcassets in Resources */,
 				A790A20A29E4A05100B50611 /* Assets.xcassets in Resources */,
 			);
@@ -140,9 +276,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A790A21429E4A07300B50611 /* AttractionCard.swift in Sources */,
-				A790A20829E4A05100B50611 /* ContentView.swift in Sources */,
-				A790A20629E4A05100B50611 /* RockMountainApp.swift in Sources */,
+				B1D61EF029E5E021007F4099 /* MenuItemCard.swift in Sources */,
+				A7451EBB29E8A1D30031CFB1 /* MainView.swift in Sources */,
+				A7C7AA1329E7870800E5F998 /* Filter.swift in Sources */,
+				B1333F6E29E5C75700E95859 /* RestaurantCard.swift in Sources */,
+				B1333F7429E5CEAC00E95859 /* RestaurantDetailView.swift in Sources */,
+				B1333F7029E5C8A000E95859 /* RestaurantGridView.swift in Sources */,
+				73FA3D1D29E72B670094906D /* Welcome2View.swift in Sources */,
+				A7AE13AB29E4EC4D00AAB0CF /* Day.swift in Sources */,
+				A7F40E3529E59AB100158F34 /* Attraction.swift in Sources */,
+				A7C7AA1129E7521500E5F998 /* PopUpCard.swift in Sources */,
+				B1D0835B29E5D9090089B987 /* ImageHeader.swift in Sources */,
+				B1D5953929E73CD800CAA5D3 /* ZoomableScrollView.swift in Sources */,
+				A7AE13AD29E4EC7100AAB0CF /* Stage.swift in Sources */,
+				73FA3D1F29E72B910094906D /* EventsView.swift in Sources */,
+				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
+				A7F40E3929E59AF100158F34 /* Show.swift in Sources */,
+				A7CDE43229E8DCA800125E7F /* SearchBar.swift in Sources */,
+				A7EFEF6A29E988BF00616963 /* FavoritesView.swift in Sources */,
+				B1D5953729E72DF600CAA5D3 /* BigMapView.swift in Sources */,
+				73FA3D1929E72AFD0094906D /* OnBoardingView.swift in Sources */,
+				A7B3488929E6157C007CC4D8 /* AttractionDetailsView.swift in Sources */,
+				73A202D029EDBB9F00BE77F3 /* ShowLogoScreen.swift in Sources */,
+				B1D61EF229E5E77E007F4099 /* Restaurant.swift in Sources */,
+				73FA3D1B29E72B350094906D /* Welcome1View.swift in Sources */,
+				B1D61EF429E5E7BD007F4099 /* RestaurantMenuItem.swift in Sources */,
+				A7AE13AF29E4ED3100AAB0CF /* AttractionView.swift in Sources */,
+				A7451EBD29E8BA8C0031CFB1 /* DateParser.swift in Sources */,
+				A7CDE44129E8FA8000125E7F /* PrettyTitle.swift in Sources */,
+				B1D0835C29E5D9090089B987 /* AttractionCard.swift in Sources */,
+				B1D5953529E72B0700CAA5D3 /* MapView.swift in Sources */,
+				A7C7AA1529E7872F00E5F998 /* AttractionFilter.swift in Sources */,
+				B1D0835A29E5D9090089B987 /* RockMountainApp.swift in Sources */,
+				A79EA04029E5E4E200C68336 /* Detailable.swift in Sources */,
+				A79EA04229E5EA6F00C68336 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +441,14 @@
 				DEVELOPMENT_TEAM = 73DNAYF2TM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RockMountain/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,11 +473,14 @@
 				DEVELOPMENT_TEAM = 73DNAYF2TM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RockMountain/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
